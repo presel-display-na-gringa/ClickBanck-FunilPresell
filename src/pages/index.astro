@@ -1,11 +1,161 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import PresellPage from "../components/PresellPage.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const page = {
+  badge: "Okinawa Lifestyle Story",
+
+  title: "The Simple Okinawa Lifestyle Lesson Many People Are Rediscovering",
+
+  description:
+    "An educational presell about simple daily habits, traditional lifestyle inspiration, and why many people are looking for easier ways to support their wellness routine without complicated programs.",
+
+  heroImage: "/images/presell/v5/okinawa-hero.webp",
+  heroImageName: "okinawa-hero.webp",
+  heroAlt: "Okinawa inspired peaceful village and wellness lifestyle",
+
+  affiliateUrl: "https://34a2b4iocqlxflaago-fpy2l2z.hop.clickbank.net",
+
+  ctaText: "See The Official Presentation",
+
+  benefits: [
+    {
+      title: "Lifestyle-Oriented",
+      text: "The focus is on simple daily routine and practical wellness support rather than extreme change.",
+    },
+    {
+      title: "Simple To Explore",
+      text: "You can watch the official presentation and understand the concept before deciding.",
+    },
+    {
+      title: "Built Around Consistency",
+      text: "A repeatable routine may be easier to maintain than a strict or complicated program.",
+    },
+  ],
+
+  sections: [
+    {
+      label: "The Okinawa Curiosity",
+      title: "Why This Small Island Became A Symbol Of Simple Living",
+      image: "/images/presell/v5/okinawa-village.webp",
+      imageName: "okinawa-village.webp",
+      imageAlt: "Traditional Okinawa village lifestyle inspiration",
+      paragraphs: [
+        "Okinawa has often been associated with a slower, simpler, and more consistent way of living. While every person is different, many people are fascinated by how lifestyle patterns, food culture, daily movement, and routine can influence the way someone feels over time.",
+        "This page is not about promising a miracle or claiming that one habit can change everything overnight. Instead, it explores a simple idea: sometimes the most realistic wellness changes are not extreme. They are small, repeatable, and easy to include in a normal day.",
+        "In a world full of complicated diets, difficult programs, expensive memberships, and overwhelming advice, many people are starting to look for something easier to understand. That is why this Okinawa-inspired story has caught attention.",
+      ],
+      cta: "Continue To The Full Story",
+    },
+
+    {
+      label: "The Modern Problem",
+      title: "Many People Feel Stuck Because Their Routine Is Too Complicated",
+      image: "/images/presell/v5/modern-routine-stress.webp",
+      imageName: "modern-routine-stress.webp",
+      imageAlt: "Busy modern routine and lifestyle stress",
+      paragraphs: [
+        "A common problem today is not lack of information. Most people already know they should make better choices, move more, sleep better, drink more water, and avoid relying only on quick fixes.",
+        "The real problem is that many plans are too hard to maintain. A routine may sound good on day one, but after a few busy mornings, long workdays, family responsibilities, and unexpected stress, it becomes difficult to continue.",
+        "That is why simple approaches can feel more attractive. When a routine is easy to understand and does not require a complete lifestyle reset, it may feel more realistic for everyday people.",
+        "The Okinawa-inspired angle is interesting because it reminds people that wellness support does not always need to start with extreme changes. Sometimes it begins with making the next daily step easier.",
+      ],
+      cta: "See The Simple Explanation",
+    },
+
+    {
+      label: "The Routine Angle",
+      title: "Small Daily Actions May Be Easier Than Big Lifestyle Overhauls",
+      image: "/images/presell/v5/simple-daily-routine.webp",
+      imageName: "simple-daily-routine.webp",
+      imageAlt: "Simple daily wellness routine at home",
+      paragraphs: [
+        "One of the reasons many people fail with wellness plans is that they try to change too many things at the same time. They try to change breakfast, exercise, sleep, supplements, work schedule, and stress habits all at once.",
+        "This can quickly become overwhelming. When a person feels overwhelmed, they often return to old habits, not because they do not care, but because the plan was not easy enough to repeat.",
+        "A simple routine can be different. It gives the person one clear next step. It removes confusion. It makes the process feel less intimidating.",
+        "That is why the official presentation connected to this page focuses on a simple wellness-support concept that people can review for themselves.",
+      ],
+      cta: "Watch The Official Presentation",
+    },
+
+    {
+      label: "The Natural Inspiration",
+      title: "Why Traditional Ingredients And Daily Consistency Attract Attention",
+      image: "/images/presell/v5/natural-ingredients.webp",
+      imageName: "natural-ingredients.webp",
+      imageAlt: "Natural ingredients inspired by traditional wellness routines",
+      paragraphs: [
+        "Many people are interested in traditional wellness ideas because they feel familiar, grounded, and easier to understand than overly technical solutions.",
+        "Natural inspiration does not mean magic. It also does not mean guaranteed results. But it can help people think differently about how they support their body through consistent daily choices.",
+        "This is where the Okinawa story becomes useful as a presell angle. It creates curiosity. It gives context. It helps the visitor understand why a simple routine may feel more realistic than another complicated plan.",
+        "The next step is not to guess. The next step is to watch the full official presentation, review the explanation, and decide if the approach makes sense for your personal routine.",
+      ],
+      cta: "Review The Official Details",
+    },
+
+    {
+      label: "Before You Decide",
+      title: "What You Should Understand Before Visiting The Official Page",
+      image: "/images/presell/v5/before-you-decide.webp",
+      imageName: "before-you-decide.webp",
+      imageAlt: "Person reviewing wellness information before deciding",
+      paragraphs: [
+        "This page is educational and introductory. It is designed to help you understand the story, the lifestyle angle, and the reason many people are interested in simple wellness support.",
+        "It is not medical advice. It is not a diagnosis. It is not a replacement for a professional recommendation. If you have a medical condition, use medication, or have health concerns, you should always speak with a qualified professional.",
+        "However, if you are simply researching easier ways to support your daily wellness routine, the official presentation may be worth reviewing.",
+        "The presentation explains the concept in more detail, including the background, the routine, and what makes this approach different from complicated programs.",
+      ],
+      cta: "Go To The Official Presentation",
+    },
+
+    {
+      label: "The Next Step",
+      title: "If The Simple Okinawa-Inspired Idea Makes Sense, Watch The Full Presentation",
+      image: "/images/presell/v5/full-presentation.webp",
+      imageName: "full-presentation.webp",
+      imageAlt: "Watching the official wellness presentation",
+      paragraphs: [
+        "At this point, you have seen the basic idea: simple daily routine, lifestyle inspiration, natural wellness support, and an approach that does not depend on extreme changes.",
+        "The official presentation gives you the complete explanation in one place. You can review the details, see how the concept works, and decide whether it matches what you are looking for.",
+        "There is no need to make a rushed decision from this page alone. The purpose of this presell is to prepare you with context before you continue.",
+        "If you are curious, click below and watch the official presentation now.",
+      ],
+      cta: "See The Official Presentation",
+    },
+  ],
+
+  faq: [
+    {
+      question: "Is this the official product website?",
+      answer:
+        "No. This is an informational presell page. The buttons on this page take you to the official presentation where you can review the full details.",
+    },
+    {
+      question: "Is this page giving medical advice?",
+      answer:
+        "No. This page is educational and should not be treated as medical advice. Always speak with a qualified professional if you have health concerns or use medication.",
+    },
+    {
+      question: "Why does this page mention Okinawa?",
+      answer:
+        "Okinawa is used as a lifestyle inspiration angle because many people associate it with simple habits, traditional routines, and long-standing wellness curiosity.",
+    },
+    {
+      question: "Do I need to change my entire lifestyle?",
+      answer:
+        "The idea presented here is focused on simplicity and daily routine. The official presentation explains the complete concept so you can decide if it fits your needs.",
+    },
+    {
+      question: "Where can I see more details?",
+      answer:
+        "Click any button on this page to visit the official presentation and review the complete explanation.",
+    },
+  ],
+
+  finalTitle: "Ready To See The Full Explanation?",
+
+  finalText:
+    "If this Okinawa-inspired lifestyle story makes sense to you, the next step is to watch the official presentation and review the complete details for yourself.",
+};
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<PresellPage {...page} />

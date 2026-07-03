@@ -1,0 +1,438 @@
+---
+const {
+  badge = "Wellness Guide",
+  title = "Simple Wellness Support",
+  description = "A practical guide for people looking for a simpler daily wellness routine.",
+  heroImage = "",
+  heroAlt = "",
+  heroImageName = "",
+  affiliateUrl = "#",
+  ctaText = "See The Official Presentation",
+  benefits = [],
+  sections = [],
+  faq = [],
+  finalTitle = "Ready To Learn More?",
+  finalText = "Visit the official presentation to review the complete details.",
+} = Astro.props;
+
+const getImageName = (path) => {
+  if (!path) return "";
+  return path.split("/").pop();
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+
+  <body>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="badge">{badge}</span>
+
+            <h1>{title}</h1>
+
+            <p>{description}</p>
+
+            <a href={affiliateUrl} class="btn">
+              {ctaText}
+            </a>
+          </div>
+
+          {heroImage && (
+            <div class="image-box hero-image">
+              <div class="image-label">
+                Imagem: {heroImageName || getImageName(heroImage)}
+              </div>
+
+              <img src={heroImage} alt={heroAlt || title} loading="eager" />
+            </div>
+          )}
+        </div>
+      </section>
+
+      {benefits.length > 0 && (
+        <section class="benefits-section">
+          <div class="container benefits-grid">
+            {benefits.map((benefit) => (
+              <article class="benefit-card">
+                <h3>✓ {benefit.title}</h3>
+                <p>{benefit.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {sections.length > 0 && (
+        <section class="content-sections">
+          <div class="container">
+            {sections.map((section, index) => (
+              <article class={`story-section ${index % 2 === 1 ? "reverse" : ""}`}>
+                <div class="section-copy">
+                  {section.label && <span class="section-label">{section.label}</span>}
+
+                  <h2>{section.title}</h2>
+
+                  {section.paragraphs?.map((paragraph) => (
+                    <p>{paragraph}</p>
+                  ))}
+
+                  {section.cta && (
+                    <a href={affiliateUrl} class="btn section-btn">
+                      {section.cta}
+                    </a>
+                  )}
+                </div>
+
+                {section.image && (
+                  <div class="image-box section-image">
+                    <div class="image-label">
+                      Imagem: {section.imageName || getImageName(section.image)}
+                    </div>
+
+                    <img
+                      src={section.image}
+                      alt={section.imageAlt || section.title}
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {faq.length > 0 && (
+        <section class="faq-section">
+          <div class="container faq-container">
+            <h2>Common Questions</h2>
+
+            <div class="faq-list">
+              {faq.map((item) => (
+                <details>
+                  <summary>{item.question}</summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section class="final-cta">
+        <div class="container final-container">
+          <h2>{finalTitle}</h2>
+
+          <p>{finalText}</p>
+
+          <a href={affiliateUrl} class="btn">
+            {ctaText}
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(body) {
+    margin: 0;
+    font-family:
+      Inter,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+    color: #102033;
+    background: #faf7f1;
+  }
+
+  .container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  .hero {
+    padding: 80px 0 60px;
+    background: linear-gradient(180deg, #f8ead9 0%, #faf7f1 100%);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 56px;
+    align-items: center;
+  }
+
+  .badge {
+    display: inline-flex;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #fff3df;
+    border: 1px solid #e7c58e;
+    color: #b05d00;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    margin: 0 0 20px;
+    font-size: clamp(40px, 5vw, 68px);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+    color: #102033;
+  }
+
+  .hero-copy p {
+    max-width: 620px;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #334155;
+    margin-bottom: 28px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 24px;
+    border-radius: 10px;
+    background: #e36f00;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 15px;
+    box-shadow: 0 12px 24px rgba(227, 111, 0, 0.28);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(227, 111, 0, 0.35);
+  }
+
+  .image-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    background: #fff7ed;
+    border: 1px solid #ead8bd;
+    box-shadow: 0 24px 70px rgba(31, 41, 55, 0.12);
+  }
+
+  .image-label {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+    padding: 8px 13px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.88);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 900;
+  }
+
+  .image-box img {
+    display: block;
+    width: 100%;
+    min-height: 360px;
+    object-fit: cover;
+  }
+
+  .benefits-section {
+    padding: 36px 0 70px;
+    background: #faf7f1;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .benefit-card {
+    padding: 26px;
+    border-radius: 18px;
+    background: #fffaf4;
+    border: 1px solid #e7cda5;
+  }
+
+  .benefit-card h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    color: #102033;
+  }
+
+  .benefit-card p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #475569;
+  }
+
+  .content-sections {
+    padding: 80px 0;
+    background: #ffffff;
+  }
+
+  .story-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 54px;
+    align-items: center;
+    padding: 70px 0;
+    border-bottom: 1px solid #eee1d1;
+  }
+
+  .story-section:first-child {
+    padding-top: 0;
+  }
+
+  .story-section:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .story-section.reverse .section-copy {
+    order: 2;
+  }
+
+  .story-section.reverse .section-image {
+    order: 1;
+  }
+
+  .section-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #d46a00;
+    font-weight: 900;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .section-copy h2 {
+    margin: 0 0 22px;
+    font-size: clamp(30px, 3.5vw, 48px);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+    color: #102033;
+  }
+
+  .section-copy p {
+    font-size: 18px;
+    line-height: 1.85;
+    color: #334155;
+    margin: 0 0 18px;
+  }
+
+  .section-btn {
+    margin-top: 12px;
+  }
+
+  .faq-section {
+    padding: 80px 0;
+    background: #faf7f1;
+  }
+
+  .faq-container {
+    max-width: 760px;
+  }
+
+  .faq-container h2 {
+    text-align: center;
+    font-size: 36px;
+    margin: 0 0 28px;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 12px;
+  }
+
+  details {
+    background: #fffaf4;
+    border: 1px solid #e7cda5;
+    border-radius: 14px;
+    padding: 18px 20px;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 900;
+    color: #102033;
+  }
+
+  details p {
+    margin: 14px 0 0;
+    color: #475569;
+    line-height: 1.7;
+  }
+
+  .final-cta {
+    padding: 80px 0;
+    background: #142132;
+    color: #fff;
+    text-align: center;
+  }
+
+  .final-container {
+    max-width: 760px;
+  }
+
+  .final-cta h2 {
+    margin: 0 0 16px;
+    font-size: 38px;
+    letter-spacing: -0.04em;
+  }
+
+  .final-cta p {
+    margin: 0 auto 28px;
+    max-width: 620px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #e2e8f0;
+  }
+
+  @media (max-width: 900px) {
+    .hero-grid,
+    .story-section {
+      grid-template-columns: 1fr;
+    }
+
+    .story-section.reverse .section-copy,
+    .story-section.reverse .section-image {
+      order: initial;
+    }
+
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero {
+      padding-top: 50px;
+    }
+
+    h1 {
+      font-size: 42px;
+    }
+  }
+</style>

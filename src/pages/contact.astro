@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact â€” WellnessDailyReport</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f0;
+      color: #2c2c2c;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    .top-bar {
+      background: #1a1a2e;
+      color: #ccc;
+      font-size: 12px;
+      text-align: center;
+      padding: 8px 16px;
+    }
+    .top-bar span { color: #e8c46a; font-weight: bold; }
+    .site-header {
+      background: #fff;
+      border-bottom: 3px solid #2e7d32;
+      padding: 14px 20px;
+    }
+    .site-logo { font-size: 18px; font-weight: 800; color: #1a1a2e; }
+    .site-logo span { color: #2e7d32; }
+    .container {
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 0 16px 60px;
+    }
+
+    /* Hero */
+    .page-hero {
+      background: linear-gradient(135deg, #1a1a2e, #2e7d32);
+      color: #fff;
+      border-radius: 12px;
+      padding: 48px 40px;
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .page-hero h1 {
+      font-family: Georgia, serif;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .page-hero p {
+      font-size: 16px;
+      opacity: 0.85;
+      max-width: 520px;
+      margin: 0 auto;
+      color: #fff;
+    }
+
+    /* Grid */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    /* Info cards */
+    .info-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .info-card .card-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+    .info-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 4px;
+    }
+    .info-card p {
+      font-size: 13px;
+      color: #666;
+      margin: 0;
+      line-height: 1.55;
+    }
+    .info-card a { color: #2e7d32; font-weight: 700; }
+
+    /* Form */
+    .form-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 36px 40px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      margin-bottom: 24px;
+    }
+    .form-box h2 {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      color: #1a1a2e;
+      margin-bottom: 6px;
+    }
+    .form-box .form-subtitle {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #e8f5e9;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+    }
+    label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 6px;
+      letter-spacing: 0.3px;
+    }
+    label span { color: #c62828; }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      color: #333;
+      background: #fafafa;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      padding: 12px 14px;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #2e7d32;
+      background: #fff;
+    }
+    textarea { resize: vertical; min-height: 130px; }
+    select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666' d='M0 0l6 8 6-8z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
+    .checkbox-group {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 22px;
+    }
+    .checkbox-group input { width: auto; margin-top: 3px; }
+    .checkbox-group label {
+      font-size: 13px;
+      font-weight: 400;
+      color: #555;
+      letter-spacing: 0;
+    }
+    .submit-btn {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #2e7d32, #43a047);
+      color: #fff;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      padding: 16px 24px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(46,125,50,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+      letter-spacing: 0.3px;
+    }
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(46,125,50,0.45);
+    }
+    .form-note {
+      font-size: 12px;
+      color: #aaa;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* FAQ */
+    .faq-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px 36px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .faq-box h2 {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a2e;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e8f5e9;
+    }
+    .faq-item { margin-bottom: 18px; }
+    .faq-item h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #2e7d32;
+      margin-bottom: 4px;
+    }
+    .faq-item p {
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+    }
+
+    .site-footer {
+      background: #1a1a2e;
+      color: #aaa;
+      font-size: 11px;
+      text-align: center;
+      padding: 24px 20px;
+      margin-top: 50px;
+      line-height: 1.7;
+    }
+    .site-footer a { color: #81c784; }
+
+    @media(max-width:680px){
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .form-box { padding: 24px 20px; }
+      .page-hero { padding: 36px 20px; }
+      .page-hero h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-bar"><span>WELLNESS EDUCATION</span> â€” Independent Consumer Information Resource</div>
+
+<header class="site-header">
+  <div class="site-logo">Wellness<span>Daily</span>Report</div>
+</header>
+
+<div class="container">
+
+  <!-- Hero -->
+  <div class="page-hero">
+    <h1>ðŸ“¬ Get in Touch</h1>
+    <p>Have a question, feedback, or partnership inquiry? We typically respond within 1â€“2 business days.</p>
+  </div>
+
+  <!-- Info Cards -->
+  <div class="contact-grid">
+    <div class="info-card">
+      <div class="card-icon">âœ‰ï¸</div>
+      <div>
+        <h3>General Inquiries</h3>
+        <p>For general questions or feedback:<br>
+        <a href="mailto:hello@wellnessdailyreport.com">hello@wellnessdailyreport.com</a></p>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">ðŸ”’</div>
+      <div>
+        <h3>Privacy Requests</h3>
+        <p>For data deletion or access requests:<br>
+        <a href="mailto:privacy@wellnessdailyreport.com">privacy@wellnessdailyreport.com</a></p>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">ðŸ¤</div>
+      <div>
+        <h3>Partnerships</h3>
+        <p>For affiliate or editorial partnerships:<br>
+        <a href="mailto:partners@wellnessdailyreport.com">partners@wellnessdailyreport.com</a></p>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">â±ï¸</div>
+      <div>
+        <h3>Response Time</h3>
+        <p>We respond to all messages within <strong>1â€“2 business days</strong>. Please check your spam folder if you don't hear back.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="form-box">
+    <h2>Send Us a Message</h2>
+    <p class="form-subtitle">Fill out the form below and we'll get back to you as soon as possible.</p>
+
+    <form action="#" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="first-name">First Name <span>*</span></label>
+          <input type="text" id="first-name" name="first_name" placeholder="e.g. Sarah" required />
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name <span>*</span></label>
+          <input type="text" id="last-name" name="last_name" placeholder="e.g. Johnson" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address <span>*</span></label>
+        <input type="email" id="email" name="email" placeholder="yourname@email.com" required />
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject <span>*</span></label>
+        <select id="subject" name="subject" required>
+          <option value="" disabled selected>Select a topic...</option>
+          <option value="general">General Question</option>
+          <option value="product">Product Information</option>
+          <option value="affiliate">Affiliate / Partnership</option>
+          <option value="privacy">Privacy / Data Request</option>
+          <option value="correction">Content Correction</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message <span>*</span></label>
+        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+      </div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="privacy-agree" name="privacy_agree" required />
+        <label for="privacy-agree">
+          I have read and agree to the <a href="/privacy-policy" style="color:#2e7d32;font-weight:700;">Privacy Policy</a>. I understand my data will be used only to respond to my inquiry.
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn">ðŸ“¨ Send Message</button>
+      <p class="form-note">ðŸ”’ Your information is safe with us. We never sell or share your data with third parties.</p>
+    </form>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-box">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h4>Can I get a refund on a product I purchased?</h4>
+      <p>We are not the seller of any products. For refund requests, please contact the official product vendor directly. Okinawa Flat Belly Tonic offers a 90-day money-back guarantee through ClickBank's buyer support.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Are you affiliated with ClickBank or the product vendors?</h4>
+      <p>We are independent content publishers participating in ClickBank's affiliate program. We are not employees or representatives of ClickBank or any product manufacturer. See our full <a href="/affiliate-disclosure" style="color:#2e7d32;font-weight:700;">Affiliate Disclosure</a>.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Can I request removal of my personal data?</h4>
+      <p>Yes. Please email us at <a href="mailto:privacy@wellnessdailyreport.com" style="color:#2e7d32;font-weight:700;">privacy@wellnessdailyreport.com</a> with your request, and we will process it within 30 days in accordance with GDPR and CCPA guidelines.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Do you offer advertising or sponsored content?</h4>
+      <p>We are open to editorial partnerships that align with our educational focus. Please use the form above and select "Affiliate / Partnership" as your subject.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>How long until I receive a response?</h4>
+      <p>We aim to respond to all inquiries within 1â€“2 business days. For urgent matters, please indicate "URGENT" in your subject line.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <p>Â© 2026 WellnessDailyReport.com â€” Independent Educational Resource</p>
+  <p style="margin-top:6px;">
+    <a href="/privacy-policy">Privacy Policy</a> &nbsp;|&nbsp;
+    <a href="/disclaimer">Disclaimer</a> &nbsp;|&nbsp;
+    <a href="/affiliate-disclosure">Affiliate Disclosure</a> &nbsp;|&nbsp;
+    <a href="/contact">Contact</a>
+  </p>
+</footer>
+
+</body>
+</html>
+
