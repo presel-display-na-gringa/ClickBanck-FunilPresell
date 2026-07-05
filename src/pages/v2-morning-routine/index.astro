@@ -1,888 +1,649 @@
 ---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Why You're Exhausted AND Gaining Weight at the Same Time — WellnessDailyReport";
+const description = "A hidden inflammatory protein may be blocking your metabolism — even when you eat right and exercise. Here's what Okinawan women discovered centuries ago.";
 ---
 
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Why You're Exhausted AND Gaining Weight at the Same Time — WellnessDailyReport</title>
-  <meta name="description" content="A hidden inflammatory protein may be blocking your metabolism — even when you eat right and exercise. Here's what Okinawan women discovered centuries ago." />
+<Layout title={title}>
+  <Fragment slot="head">
+    <meta name="description" content={description} />
 
-  <!-- ============================================ -->
-  <!-- GOOGLE TAG MANAGER / GA4 -->
-  <!-- ============================================ -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f0;
+        color: #2c2c2c;
+        font-size: 16px;
+        line-height: 1.75;
+      }
 
-  <!-- ============================================ -->
-  <!-- GOOGLE ADS (CONVERSION TRACKING) -->
-  <!-- ============================================ -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-XXXXXXXXXX');
-  </script>
+      .top-bar {
+        background: #1a1a2e;
+        color: #ccc;
+        font-size: 12px;
+        text-align: center;
+        padding: 8px 16px;
+        letter-spacing: 0.3px;
+      }
+      .top-bar span { color: #e8c46a; font-weight: 700; }
 
-  <!-- ============================================ -->
-  <!-- META PIXEL (FACEBOOK) -->
-  <!-- ============================================ -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'XXXXXXXXXXXXXXX');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"
-    />
-  </noscript>
-  <!-- ============================================ -->
+      .site-header {
+        background: #fff;
+        border-bottom: 3px solid #2e7d32;
+        padding: 14px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .site-logo { font-size: 20px; font-weight: 800; color: #1a1a2e; text-decoration: none; }
+      .site-logo span { color: #2e7d32; }
+      .header-nav { display: flex; gap: 20px; }
+      .header-nav a { font-size: 13px; color: #555; text-decoration: none; font-weight: 600; transition: color 0.2s; }
+      .header-nav a:hover { color: #2e7d32; }
 
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f0;
-      color: #2c2c2c;
-      font-size: 16px;
-      line-height: 1.75;
-    }
+      .hero-banner {
+        background: linear-gradient(135deg, #1a1a2e 0%, #0d3b1e 100%);
+        padding: 52px 20px;
+        text-align: center;
+      }
+      .hero-category {
+        display: inline-block;
+        background: rgba(232,196,106,0.15);
+        color: #e8c46a;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 5px 16px;
+        border-radius: 20px;
+        border: 1px solid rgba(232,196,106,0.3);
+        margin-bottom: 18px;
+      }
+      .hero-headline {
+        font-family: Georgia, serif;
+        font-size: clamp(26px, 4vw, 42px);
+        color: #fff;
+        line-height: 1.25;
+        max-width: 780px;
+        margin: 0 auto 18px;
+      }
+      .hero-headline em { color: #81c784; font-style: normal; }
+      .hero-sub {
+        font-size: 17px;
+        color: rgba(255,255,255,0.75);
+        max-width: 600px;
+        margin: 0 auto 28px;
+        line-height: 1.65;
+      }
+      .hero-meta { display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; }
+      .meta-avatar {
+        width: 42px; height: 42px; border-radius: 50%;
+        background: linear-gradient(135deg, #2e7d32, #81c784);
+        display: flex; align-items: center; justify-content: center;
+        font-size: 18px; border: 2px solid rgba(255,255,255,0.2);
+      }
+      .meta-text { text-align: left; }
+      .meta-author { font-size: 13px; color: #fff; font-weight: 700; }
+      .meta-date { font-size: 12px; color: rgba(255,255,255,0.5); }
+      .meta-divider { width: 1px; height: 30px; background: rgba(255,255,255,0.15); }
+      .meta-read { font-size: 12px; color: rgba(255,255,255,0.5); }
 
-    .top-bar {
-      background: #1a1a2e;
-      color: #ccc;
-      font-size: 12px;
-      text-align: center;
-      padding: 8px 16px;
-      letter-spacing: 0.3px;
-    }
-    .top-bar span { color: #e8c46a; font-weight: 700; }
+      .page-wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 16px 60px;
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 32px;
+        align-items: start;
+      }
 
-    .site-header {
-      background: #fff;
-      border-bottom: 3px solid #2e7d32;
-      padding: 14px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .site-logo { font-size: 20px; font-weight: 800; color: #1a1a2e; text-decoration: none; }
-    .site-logo span { color: #2e7d32; }
-    .header-nav { display: flex; gap: 20px; }
-    .header-nav a { font-size: 13px; color: #555; text-decoration: none; font-weight: 600; transition: color 0.2s; }
-    .header-nav a:hover { color: #2e7d32; }
+      .article-body { min-width: 0; }
 
-    .hero-banner {
-      background: linear-gradient(135deg, #1a1a2e 0%, #0d3b1e 100%);
-      padding: 52px 20px;
-      text-align: center;
-    }
-    .hero-category {
-      display: inline-block;
-      background: rgba(232,196,106,0.15);
-      color: #e8c46a;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      padding: 5px 16px;
-      border-radius: 20px;
-      border: 1px solid rgba(232,196,106,0.3);
-      margin-bottom: 18px;
-    }
-    .hero-headline {
-      font-family: Georgia, serif;
-      font-size: clamp(26px, 4vw, 42px);
-      color: #fff;
-      line-height: 1.25;
-      max-width: 780px;
-      margin: 0 auto 18px;
-    }
-    .hero-headline em { color: #81c784; font-style: normal; }
-    .hero-sub {
-      font-size: 17px;
-      color: rgba(255,255,255,0.75);
-      max-width: 600px;
-      margin: 0 auto 28px;
-      line-height: 1.65;
-    }
-    .hero-meta {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-    .meta-avatar {
-      width: 42px; height: 42px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #2e7d32, #81c784);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px;
-      border: 2px solid rgba(255,255,255,0.2);
-    }
-    .meta-text { text-align: left; }
-    .meta-author { font-size: 13px; color: #fff; font-weight: 700; }
-    .meta-date { font-size: 12px; color: rgba(255,255,255,0.5); }
-    .meta-divider { width: 1px; height: 30px; background: rgba(255,255,255,0.15); }
-    .meta-read { font-size: 12px; color: rgba(255,255,255,0.5); }
+      .img-block { border-radius: 12px; overflow: hidden; margin-bottom: 28px; }
+      .img-block img { display: block; width: 100%; height: auto; }
+      .img-caption {
+        font-size: 12px; color: #888; text-align: center; padding: 8px 14px;
+        background: #fafafa; border-top: 1px solid #e0e0e0; font-style: italic;
+      }
 
-    .page-wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 16px 60px;
-      display: grid;
-      grid-template-columns: 1fr 320px;
-      gap: 32px;
-      align-items: start;
-    }
+      .article-lead {
+        font-family: Georgia, serif; font-size: 19px; color: #2c2c2c;
+        line-height: 1.75; margin-bottom: 24px; padding-bottom: 24px;
+        border-bottom: 2px solid #e8f5e9;
+      }
+      .article-body p { font-size: 16px; color: #3a3a3a; margin-bottom: 18px; line-height: 1.8; }
+      .article-body strong { color: #1a1a2e; }
 
-    .article-body { min-width: 0; }
+      .section-heading {
+        font-family: Georgia, serif; font-size: 22px; color: #1a1a2e;
+        margin: 36px 0 14px; padding-bottom: 10px; border-bottom: 2px solid #e8f5e9;
+      }
+      .section-heading-accent {
+        font-family: Georgia, serif; font-size: 20px; color: #fff;
+        background: linear-gradient(135deg, #1a1a2e, #2e7d32);
+        padding: 12px 20px; border-radius: 8px; margin: 36px 0 16px;
+      }
 
-    /* ── IMAGENS ── */
-    .img-block {
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 28px;
-    }
-    .img-block img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    .img-caption {
-      font-size: 12px;
-      color: #888;
-      text-align: center;
-      padding: 8px 14px;
-      background: #fafafa;
-      border-top: 1px solid #e0e0e0;
-      font-style: italic;
-    }
+      .pull-quote { border-left: 5px solid #2e7d32; padding: 18px 22px; margin: 28px 0; background: #f1f8e9; border-radius: 0 10px 10px 0; }
+      .pull-quote p { font-family: Georgia, serif; font-size: 18px !important; color: #1b5e20 !important; font-style: italic; margin: 0 !important; line-height: 1.65 !important; }
 
-    .article-lead {
-      font-family: Georgia, serif;
-      font-size: 19px;
-      color: #2c2c2c;
-      line-height: 1.75;
-      margin-bottom: 24px;
-      padding-bottom: 24px;
-      border-bottom: 2px solid #e8f5e9;
-    }
-    .article-body p { font-size: 16px; color: #3a3a3a; margin-bottom: 18px; line-height: 1.8; }
-    .article-body strong { color: #1a1a2e; }
+      .crp-box { background: #fff8e1; border: 1px solid #ffe082; border-left: 5px solid #f9a825; border-radius: 0 10px 10px 0; padding: 20px 24px; margin: 28px 0; }
+      .crp-box .crp-title { font-weight: 800; color: #e65100; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+      .crp-box p { font-size: 15px !important; color: #5a4000 !important; margin: 0 !important; }
 
-    .section-heading {
-      font-family: Georgia, serif;
-      font-size: 22px;
-      color: #1a1a2e;
-      margin: 36px 0 14px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #e8f5e9;
-    }
-    .section-heading-accent {
-      font-family: Georgia, serif;
-      font-size: 20px;
-      color: #fff;
-      background: linear-gradient(135deg, #1a1a2e, #2e7d32);
-      padding: 12px 20px;
-      border-radius: 8px;
-      margin: 36px 0 16px;
-    }
+      .symptom-check { background: #fff; border: 1.5px solid #e0e0e0; border-radius: 12px; padding: 24px 28px; margin: 28px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+      .symptom-check h4 { font-family: Georgia, serif; font-size: 17px; color: #1a1a2e; margin-bottom: 16px; }
+      .check-item { display: flex; gap: 12px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid #f5f5f5; font-size: 15px; color: #3a3a3a; }
+      .check-item:last-child { border-bottom: none; }
+      .check-icon { color: #c62828; font-size: 18px; flex-shrink: 0; margin-top: 1px; }
 
-    .pull-quote {
-      border-left: 5px solid #2e7d32;
-      padding: 18px 22px;
-      margin: 28px 0;
-      background: #f1f8e9;
-      border-radius: 0 10px 10px 0;
-    }
-    .pull-quote p {
-      font-family: Georgia, serif;
-      font-size: 18px !important;
-      color: #1b5e20 !important;
-      font-style: italic;
-      margin: 0 !important;
-      line-height: 1.65 !important;
-    }
+      .ingredient-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0 28px; }
+      .ingredient-card { background: #fff; border: 1px solid #e8f5e9; border-top: 4px solid #2e7d32; border-radius: 10px; padding: 18px 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+      .ingredient-card .ing-icon { font-size: 28px; margin-bottom: 8px; display: block; }
+      .ingredient-card h4 { font-size: 14px; font-weight: 800; color: #1a1a2e; margin-bottom: 6px; }
+      .ingredient-card p { font-size: 13px !important; color: #555 !important; margin: 0 !important; line-height: 1.55 !important; }
 
-    .crp-box {
-      background: #fff8e1;
-      border: 1px solid #ffe082;
-      border-left: 5px solid #f9a825;
-      border-radius: 0 10px 10px 0;
-      padding: 20px 24px;
-      margin: 28px 0;
-    }
-    .crp-box .crp-title {
-      font-weight: 800;
-      color: #e65100;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
-    }
-    .crp-box p { font-size: 15px !important; color: #5a4000 !important; margin: 0 !important; }
+      .testimonial-card { background: linear-gradient(135deg, #1a1a2e, #0d3b1e); border-radius: 14px; padding: 28px 28px 24px; margin: 32px 0; color: #fff; position: relative; }
+      .testimonial-card::before { content: '"'; font-family: Georgia, serif; font-size: 80px; color: rgba(255, 255, 255, 0.08); position: absolute; top: 10px; left: 20px; line-height: 1; }
+      .testimonial-text { font-family: Georgia, serif; font-size: 17px; line-height: 1.7; color: #ffffff; margin-bottom: 18px; position: relative; z-index: 1; }
+      .testimonial-author { display: flex; align-items: center; gap: 12px; position: relative; z-index: 1; }
+      .t-avatar { font-size: 28px; }
+      .t-name  { font-weight: 700; font-size: 15px; color: #ffffff; }
+      .t-location { font-size: 12px; color: rgba(255,255,255,0.75); }
+      .t-stars { color: #f9a825; font-size: 15px; margin-top: 3px; }
 
-    .symptom-check {
-      background: #fff;
-      border: 1.5px solid #e0e0e0;
-      border-radius: 12px;
-      padding: 24px 28px;
-      margin: 28px 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    .symptom-check h4 { font-family: Georgia, serif; font-size: 17px; color: #1a1a2e; margin-bottom: 16px; }
-    .check-item {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      padding: 8px 0;
-      border-bottom: 1px solid #f5f5f5;
-      font-size: 15px;
-      color: #3a3a3a;
-    }
-    .check-item:last-child { border-bottom: none; }
-    .check-icon { color: #c62828; font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+      .btn-wrap { display: flex; justify-content: center; margin: 28px 0; }
 
-    .ingredient-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin: 20px 0 28px;
-    }
-    .ingredient-card {
-      background: #fff;
-      border: 1px solid #e8f5e9;
-      border-top: 4px solid #2e7d32;
-      border-radius: 10px;
-      padding: 18px 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    }
-    .ingredient-card .ing-icon { font-size: 28px; margin-bottom: 8px; display: block; }
-    .ingredient-card h4 { font-size: 14px; font-weight: 800; color: #1a1a2e; margin-bottom: 6px; }
-    .ingredient-card p { font-size: 13px !important; color: #555 !important; margin: 0 !important; line-height: 1.55 !important; }
+      .btn-dark-green {
+        display: inline-block; background: #1b5e20; color: #fff !important; font-size: 15px; font-weight: 700;
+        padding: 14px 40px; border-radius: 50px; text-align: center; text-decoration: none;
+        transition: background 0.2s, transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 14px rgba(27,94,32,0.35);
+      }
+      .btn-dark-green:hover { background: #2e7d32; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(27,94,32,0.45); }
 
-    .testimonial-card {
-      background: linear-gradient(135deg, #1a1a2e, #0d3b1e);
-      border-radius: 14px;
-      padding: 28px 28px 24px;
-      margin: 32px 0;
-      color: #fff;
-      position: relative;
-    }
-    .testimonial-card::before {
-      content: '"';
-      font-family: Georgia, serif;
-      font-size: 80px;
-      color: rgba(255, 255, 255, 0.08);
-      position: absolute;
-      top: 10px;
-      left: 20px;
-      line-height: 1;
-    }
-    .testimonial-text {
-      font-family: Georgia, serif;
-      font-size: 17px;
-      line-height: 1.7;
-      color: #ffffff;
-      margin-bottom: 18px;
-      position: relative;
-      z-index: 1;
-    }
-    .t-name  { font-weight: 700; font-size: 15px; color: #ffffff; }
-    .t-location { font-size: 12px; color: rgba(255,255,255,0.75); }
-    .t-stars { color: #f9a825; font-size: 15px; margin-top: 3px; }
+      .btn-mid-green {
+        display: inline-block; background: #2e7d32; color: #fff !important; font-size: 15px; font-weight: 700;
+        padding: 14px 40px; border-radius: 50px; text-align: center; text-decoration: none;
+        transition: background 0.2s, transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 14px rgba(46,125,50,0.35);
+      }
+      .btn-mid-green:hover { background: #388e3c; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(46,125,50,0.45); }
 
-    .btn-wrap { display: flex; justify-content: center; margin: 28px 0; }
+      .btn-yellow {
+        display: inline-block; background: #f9a825; color: #1a1a2e !important; font-size: 15px; font-weight: 800;
+        padding: 14px 40px; border-radius: 50px; text-align: center; text-decoration: none;
+        transition: background 0.2s, transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 14px rgba(249,168,37,0.4);
+      }
+      .btn-yellow:hover { background: #f57f17; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(249,168,37,0.5); }
 
-    .btn-dark-green {
-      display: inline-block;
-      background: #1b5e20;
-      color: #fff !important;
-      font-size: 15px;
-      font-weight: 700;
-      padding: 14px 40px;
-      border-radius: 50px;
-      text-align: center;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 14px rgba(27,94,32,0.35);
-    }
-    .btn-dark-green:hover {
-      background: #2e7d32;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(27,94,32,0.45);
-    }
+      .info-strip { background: linear-gradient(135deg, #1a1a2e, #0d3b1e); border-radius: 14px; padding: 28px 24px; text-align: center; margin: 36px 0; }
+      .info-strip h3 { font-family: Georgia, serif; font-size: 20px; color: #fff; margin-bottom: 8px; }
+      .info-strip p { font-size: 14px !important; color: rgba(255,255,255,0.7) !important; margin-bottom: 18px !important; }
+      .info-strip .guarantee-note { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 10px !important; margin-bottom: 0 !important; }
 
-    .btn-mid-green {
-      display: inline-block;
-      background: #2e7d32;
-      color: #fff !important;
-      font-size: 15px;
-      font-weight: 700;
-      padding: 14px 40px;
-      border-radius: 50px;
-      text-align: center;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 14px rgba(46,125,50,0.35);
-    }
-    .btn-mid-green:hover {
-      background: #388e3c;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(46,125,50,0.45);
-    }
+      .compare-table { width: 100%; border-collapse: collapse; border-radius: 10px; overflow: hidden; margin: 20px 0 28px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+      .compare-table thead { background: #1a1a2e; color: #fff; }
+      .compare-table thead th { padding: 14px 16px; font-size: 13px; font-weight: 700; text-align: center; }
+      .compare-table thead th:first-child { text-align: left; }
+      .compare-table tbody tr:nth-child(even) { background: #f9f9f9; }
+      .compare-table tbody tr:nth-child(odd) { background: #fff; }
+      .compare-table tbody td { padding: 12px 16px; font-size: 14px; color: #3a3a3a; border-bottom: 1px solid #eee; text-align: center; }
+      .compare-table tbody td:first-child { text-align: left; font-weight: 600; color: #1a1a2e; }
+      .yes { color: #2e7d32; font-weight: 800; font-size: 16px; }
+      .no  { color: #c62828; font-weight: 800; font-size: 16px; }
+      .highlight-col { background: #e8f5e9 !important; }
 
-    .btn-yellow {
-      display: inline-block;
-      background: #f9a825;
-      color: #1a1a2e !important;
-      font-size: 15px;
-      font-weight: 800;
-      padding: 14px 40px;
-      border-radius: 50px;
-      text-align: center;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 14px rgba(249,168,37,0.4);
-    }
-    .btn-yellow:hover {
-      background: #f57f17;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(249,168,37,0.5);
-    }
+      .faq-item { border: 1px solid #e0e0e0; border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+      .faq-q { background: #f9f9f9; padding: 14px 18px; font-weight: 700; font-size: 15px; color: #1a1a2e; display: flex; justify-content: space-between; align-items: center; }
+      .faq-q::after { content: "›"; font-size: 18px; color: #2e7d32; transform: rotate(90deg); display: inline-block; }
+      .faq-a { padding: 14px 18px; font-size: 14px; color: #555; background: #fff; border-top: 1px solid #eee; line-height: 1.65; }
 
-    .info-strip {
-      background: linear-gradient(135deg, #1a1a2e, #0d3b1e);
-      border-radius: 14px;
-      padding: 28px 24px;
-      text-align: center;
-      margin: 36px 0;
-    }
-    .info-strip h3 { font-family: Georgia, serif; font-size: 20px; color: #fff; margin-bottom: 8px; }
-    .info-strip p { font-size: 14px !important; color: rgba(255,255,255,0.7) !important; margin-bottom: 18px !important; }
-    .info-strip .guarantee-note { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 10px !important; margin-bottom: 0 !important; }
+      .sidebar { min-width: 0; }
+      .sidebar-widget { background: #fff; border-radius: 12px; padding: 22px 20px; margin-bottom: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+      .widget-title { font-family: Georgia, serif; font-size: 16px; color: #1a1a2e; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #e8f5e9; }
 
-    .compare-table {
-      width: 100%;
-      border-collapse: collapse;
-      border-radius: 10px;
-      overflow: hidden;
-      margin: 20px 0 28px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-    }
-    .compare-table thead { background: #1a1a2e; color: #fff; }
-    .compare-table thead th { padding: 14px 16px; font-size: 13px; font-weight: 700; text-align: center; }
-    .compare-table thead th:first-child { text-align: left; }
-    .compare-table tbody tr:nth-child(even) { background: #f9f9f9; }
-    .compare-table tbody tr:nth-child(odd) { background: #fff; }
-    .compare-table tbody td { padding: 12px 16px; font-size: 14px; color: #3a3a3a; border-bottom: 1px solid #eee; text-align: center; }
-    .compare-table tbody td:first-child { text-align: left; font-weight: 600; color: #1a1a2e; }
-    .yes { color: #2e7d32; font-weight: 800; font-size: 16px; }
-    .no  { color: #c62828; font-weight: 800; font-size: 16px; }
-    .highlight-col { background: #e8f5e9 !important; }
+      .product-widget { background: linear-gradient(135deg, #1a1a2e, #0d3b1e); border-radius: 12px; padding: 24px 20px; margin-bottom: 24px; text-align: center; }
+      .product-widget-badge { background: #e8c46a; color: #1a1a2e; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 14px; }
+      .product-widget-img { width: 100px; height: 100px; background: linear-gradient(135deg, #2e7d32, #81c784); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 44px; margin: 0 auto 14px; border: 3px solid rgba(255,255,255,0.15); }
+      .product-widget h3 { font-family: Georgia, serif; font-size: 16px; color: #fff; margin-bottom: 6px; }
+      .product-widget .pw-rating { color: #f9a825; font-size: 16px; margin-bottom: 4px; }
+      .product-widget .pw-reviews { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 18px; }
+      .product-widget .pw-guarantee { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 12px; }
 
-    .faq-item { border: 1px solid #e0e0e0; border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
-    .faq-q { background: #f9f9f9; padding: 14px 18px; font-weight: 700; font-size: 15px; color: #1a1a2e; display: flex; justify-content: space-between; align-items: center; }
-    .faq-q::after { content: "›"; font-size: 18px; color: #2e7d32; transform: rotate(90deg); display: inline-block; }
-    .faq-a { padding: 14px 18px; font-size: 14px; color: #555; background: #fff; border-top: 1px solid #eee; line-height: 1.65; }
+      .rating-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+      .rating-label { font-size: 13px; color: #555; width: 90px; flex-shrink: 0; }
+      .rating-bar { flex: 1; height: 8px; background: #eee; border-radius: 4px; overflow: hidden; }
+      .rating-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #2e7d32, #81c784); }
+      .rating-pct { font-size: 12px; color: #888; width: 30px; text-align: right; }
+      .overall-rating { text-align: center; margin-bottom: 16px; }
+      .overall-rating .big-score { font-size: 52px; font-weight: 900; color: #1a1a2e; line-height: 1; }
+      .overall-rating .big-stars { color: #f9a825; font-size: 22px; }
+      .overall-rating .big-label { font-size: 12px; color: #888; margin-top: 4px; }
 
-    .sidebar { min-width: 0; }
-    .sidebar-widget {
-      background: #fff;
-      border-radius: 12px;
-      padding: 22px 20px;
-      margin-bottom: 24px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    }
-    .widget-title { font-family: Georgia, serif; font-size: 16px; color: #1a1a2e; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #e8f5e9; }
+      .trust-item { display: flex; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid #f5f5f5; }
+      .trust-item:last-child { border-bottom: none; }
+      .trust-icon { font-size: 20px; flex-shrink: 0; }
+      .trust-text { font-size: 13px; color: #444; line-height: 1.4; }
+      .trust-text strong { color: #1a1a2e; font-size: 13px; }
 
-    .product-widget {
-      background: linear-gradient(135deg, #1a1a2e, #0d3b1e);
-      border-radius: 12px;
-      padding: 24px 20px;
-      margin-bottom: 24px;
-      text-align: center;
-    }
-    .product-widget-badge { background: #e8c46a; color: #1a1a2e; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 14px; }
-    .product-widget-img { width: 100px; height: 100px; background: linear-gradient(135deg, #2e7d32, #81c784); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 44px; margin: 0 auto 14px; border: 3px solid rgba(255,255,255,0.15); }
-    .product-widget h3 { font-family: Georgia, serif; font-size: 16px; color: #fff; margin-bottom: 6px; }
-    .product-widget .pw-rating { color: #f9a825; font-size: 16px; margin-bottom: 4px; }
-    .product-widget .pw-reviews { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 18px; }
-    .product-widget .pw-guarantee { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 12px; }
+      .related-item { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid #f5f5f5; text-decoration: none; }
+      .related-item:last-child { border-bottom: none; }
+      .related-thumb { width: 56px; height: 56px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 26px; }
+      .related-info .related-title { font-size: 13px; font-weight: 700; color: #1a1a2e; line-height: 1.35; margin-bottom: 3px; }
+      .related-info .related-date { font-size: 11px; color: #aaa; }
 
-    .rating-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-    .rating-label { font-size: 13px; color: #555; width: 90px; flex-shrink: 0; }
-    .rating-bar { flex: 1; height: 8px; background: #eee; border-radius: 4px; overflow: hidden; }
-    .rating-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #2e7d32, #81c784); }
-    .rating-pct { font-size: 12px; color: #888; width: 30px; text-align: right; }
-    .overall-rating { text-align: center; margin-bottom: 16px; }
-    .overall-rating .big-score { font-size: 52px; font-weight: 900; color: #1a1a2e; line-height: 1; }
-    .overall-rating .big-stars { color: #f9a825; font-size: 22px; }
-    .overall-rating .big-label { font-size: 12px; color: #888; margin-top: 4px; }
+      .disclaimer-strip { background: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px 20px; margin: 32px 0 0; font-size: 12px; color: #888; line-height: 1.6; }
+      .disclaimer-strip strong { color: #555; }
+      .disclaimer-strip a { color: #2e7d32; }
 
-    .trust-item { display: flex; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid #f5f5f5; }
-    .trust-item:last-child { border-bottom: none; }
-    .trust-icon { font-size: 20px; flex-shrink: 0; }
-    .trust-text { font-size: 13px; color: #444; line-height: 1.4; }
-    .trust-text strong { color: #1a1a2e; font-size: 13px; }
+      .site-footer { background: #1a1a2e; color: #aaa; font-size: 11px; text-align: center; padding: 28px 20px; line-height: 1.8; }
+      .site-footer a { color: #81c784; }
+      .footer-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
 
-    .related-item { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid #f5f5f5; text-decoration: none; }
-    .related-item:last-child { border-bottom: none; }
-    .related-thumb { width: 56px; height: 56px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 26px; }
-    .related-info .related-title { font-size: 13px; font-weight: 700; color: #1a1a2e; line-height: 1.35; margin-bottom: 3px; }
-    .related-info .related-date { font-size: 11px; color: #aaa; }
+      .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #2e7d32, #81c784); z-index: 9999; width: 0%; transition: width 0.1s; }
 
-    .disclaimer-strip {
-      background: #f9f9f9;
-      border: 1px solid #e0e0e0;
-      border-radius: 10px;
-      padding: 16px 20px;
-      margin: 32px 0 0;
-      font-size: 12px;
-      color: #888;
-      line-height: 1.6;
-    }
-    .disclaimer-strip strong { color: #555; }
-    .disclaimer-strip a { color: #2e7d32; }
+      @media(max-width:768px){
+        .page-wrap { grid-template-columns: 1fr; }
+        .sidebar { order: -1; }
+        .ingredient-grid { grid-template-columns: 1fr; }
+        .header-nav { display: none; }
+      }
+    </style>
+  </Fragment>
 
-    .site-footer { background: #1a1a2e; color: #aaa; font-size: 11px; text-align: center; padding: 28px 20px; line-height: 1.8; }
-    .site-footer a { color: #81c784; }
-    .footer-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+  <div class="progress-bar" id="progressBar"></div>
 
-    .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #2e7d32, #81c784); z-index: 9999; width: 0%; transition: width 0.1s; }
-
-    @media(max-width:768px){
-      .page-wrap { grid-template-columns: 1fr; }
-      .sidebar { order: -1; }
-      .ingredient-grid { grid-template-columns: 1fr; }
-      .header-nav { display: none; }
-    }
-  </style>
-</head>
-<body>
-
-<div class="progress-bar" id="progressBar"></div>
-
-<div class="top-bar">
-  <span>WELLNESS DAILY REPORT</span> — Independent Consumer Health Education &nbsp;|&nbsp; Est. 2021
-</div>
-
-<header class="site-header">
-  <a href="index.html" class="site-logo">Wellness<span>Daily</span>Report</a>
-  <nav class="header-nav">
-    <a href="#">Weight Loss</a>
-    <a href="#">Metabolism</a>
-    <a href="#">Digestion</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<div class="hero-banner">
-  <div class="hero-category">🔬 Metabolic Health · Research Report</div>
-  <h1 class="hero-headline">
-    Why Millions of Women Are Exhausted, Bloated<br>
-    — and <em>Gaining Weight Despite Trying Everything</em>
-  </h1>
-  <p class="hero-sub">
-    New research points to a silent inflammatory protein that quietly shuts down your metabolism. And a traditional Okinawan morning ritual may hold the answer.
-  </p>
-  <div class="hero-meta">
-    <div class="meta-avatar">👩‍⚕️</div>
-    <div class="meta-text">
-      <div class="meta-author">Dr. Margaret Sullivan, Contributing Writer</div>
-      <div class="meta-date">Updated: June 2026 &nbsp;·&nbsp; Wellness Daily Report</div>
-    </div>
-    <div class="meta-divider"></div>
-    <div class="meta-read">⏱ 7 min read</div>
+  <div class="top-bar">
+    <span>WELLNESS DAILY REPORT</span> — Independent Consumer Health Education &nbsp;|&nbsp; Est. 2021
   </div>
-</div>
 
-<div class="page-wrap">
+  <header class="site-header">
+    <a href="/" class="site-logo">Wellness<span>Daily</span>Report</a>
+    <nav class="header-nav">
+      <a href="#">Weight Loss</a>
+      <a href="#">Metabolism</a>
+      <a href="#">Digestion</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
 
-  <!-- ARTICLE -->
-  <article class="article-body">
-
-    <!-- IMG 01 -->
-    <div class="img-block">
-      <img src="/images/presell/v2/hero-okinawa-woman-sunset.webp" alt="Serene Okinawa coastline at sunrise — older woman holding a green powder tonic drink" width="800" height="450" loading="eager" />
-      <div class="img-caption">Traditional morning wellness rituals in Okinawa, Japan — where residents routinely live past 90 in remarkable health.</div>
-    </div>
-
-    <p class="article-lead">
-      If you've ever stuck to a diet for weeks, exercised consistently, and <strong>still couldn't lose the belly weight</strong> — you're not failing. According to emerging research, your body may be fighting against you in a way that no amount of willpower can overcome: a hidden inflammatory marker called <strong>C-Reactive Protein (CRP)</strong>.
+  <div class="hero-banner">
+    <div class="hero-category">🔬 Metabolic Health · Research Report</div>
+    <h1 class="hero-headline">
+      Why Millions of Women Are Exhausted, Bloated<br>
+      — and <em>Gaining Weight Despite Trying Everything</em>
+    </h1>
+    <p class="hero-sub">
+      New research points to a silent inflammatory protein that quietly shuts down your metabolism. And a traditional Okinawan morning ritual may hold the answer.
     </p>
-
-    <p>CRP is produced by your liver in response to inflammation. In small amounts, it's normal. But when CRP levels become chronically elevated — which happens gradually in millions of people, often without obvious symptoms — it can essentially <strong>lock fat cells shut</strong>, suppress your metabolism, and drain your energy day after day.</p>
-
-    <p>The frustrating part? Most people have no idea their CRP is elevated. There's no dramatic warning sign. It just quietly works against everything you try.</p>
-
-    <div class="symptom-check">
-      <h4>⚠️ Sound Familiar? Check the Symptoms of High CRP:</h4>
-      <div class="check-item"><span class="check-icon">✗</span> Stubborn belly fat that won't move — no matter your diet</div>
-      <div class="check-item"><span class="check-icon">✗</span> Feeling tired even after a full night's sleep</div>
-      <div class="check-item"><span class="check-icon">✗</span> Bloating, sluggish digestion, and unexplained gut discomfort</div>
-      <div class="check-item"><span class="check-icon">✗</span> Carb cravings — especially in the afternoon</div>
-      <div class="check-item"><span class="check-icon">✗</span> Low motivation, brain fog, and mood swings</div>
-      <div class="check-item"><span class="check-icon">✗</span> Weight returning quickly after dieting</div>
-      <div class="check-item"><span class="check-icon">✗</span> Feeling like your metabolism has "stopped working"</div>
-    </div>
-
-    <p>If you checked more than two or three of those boxes, there's a very real possibility that <strong>chronic low-grade inflammation</strong> is the invisible wall standing between you and the results you're working so hard for.</p>
-
-    <div class="pull-quote">
-      <p>"When CRP interferes with metabolic signaling, the body essentially becomes resistant to fat-burning — even in a caloric deficit. The problem isn't effort. It's biochemistry."</p>
-    </div>
-
-    <!-- BOTÃO 1 — Verde Escuro -->
-    <div class="btn-wrap">
-      <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" class="btn-dark-green">
-        Visit Official Website
-      </a>
-    </div>
-
-    <h2 class="section-heading">🏝️ What the People of Okinawa Figured Out Centuries Ago</h2>
-
-    <p>Okinawa, Japan holds a fascinating record: it's home to one of the <strong>highest concentrations of centenarians on Earth</strong>. Women in Okinawa not only live longer — they tend to stay lean, energetic, and mentally sharp well into their 80s and 90s.</p>
-
-    <p>Researchers studying the "Blue Zone" of Okinawa have identified several lifestyle habits that likely contribute — but one recurring pattern stands out among the women: <strong>a polyphenol-rich morning drink</strong> made from fermented plant extracts, teas, and botanical compounds consumed before 10am.</p>
-
-    <p>Why does timing matter? Because the <strong>morning metabolic window</strong> — the first 2-3 hours after waking — is when your body is primed to shift into fat-oxidation mode. Flooding your system with anti-inflammatory polyphenols during this window appears to directly counteract elevated CRP levels, allowing your metabolism to function the way it was designed to.</p>
-
-    <!-- IMG 02 -->
-    <div class="img-block">
-      <img src="/images/presell/v2/hero-ingredients-bowls.webp" alt="Flat lay of natural wellness ingredients — green tea powder, hibiscus flowers, acai berries, ginger root, black pepper" width="800" height="450" loading="lazy" />
-      <div class="img-caption">The polyphenol-rich botanicals associated with traditional Okinawan morning wellness routines.</div>
-    </div>
-
-    <h2 class="section-heading-accent">🔬 The Key Compounds Behind the Ritual</h2>
-
-    <p>Modern supplement science has attempted to isolate and concentrate the most bioactive compounds from this traditional approach. Here's what the research says about the most important ingredients:</p>
-
-    <div class="ingredient-grid">
-      <div class="ingredient-card">
-        <span class="ing-icon">🍵</span>
-        <h4>EGCG (Green & White Tea)</h4>
-        <p>Catechins in green tea extract are linked to fat oxidation and thermogenesis. A 2010 review in the <em>Journal of the American College of Nutrition</em> noted modest but consistent metabolic support from EGCG supplementation.</p>
+    <div class="hero-meta">
+      <div class="meta-avatar">👩‍⚕️</div>
+      <div class="meta-text">
+        <div class="meta-author">Dr. Margaret Sullivan, Contributing Writer</div>
+        <div class="meta-date">Updated: June 2026 &nbsp;·&nbsp; Wellness Daily Report</div>
       </div>
-      <div class="ingredient-card">
-        <span class="ing-icon">🫙</span>
-        <h4>Piperine (Black Pepper)</h4>
-        <p>Extracted from black pepper, piperine enhances the bioavailability of other compounds by up to 2000%. It also supports thermogenesis and may help reduce fat accumulation.</p>
-      </div>
-      <div class="ingredient-card">
-        <span class="ing-icon">🌺</span>
-        <h4>Hibiscus Sabdariffa</h4>
-        <p>A staple of Okinawan-inspired formulas, hibiscus is rich in anthocyanins. Studies suggest it supports healthy blood pressure, digestion, and lipid metabolism.</p>
-      </div>
-      <div class="ingredient-card">
-        <span class="ing-icon">🫐</span>
-        <h4>Acai & Aronia Berry</h4>
-        <p>Two of the most antioxidant-dense fruits known to nutritional science. These polyphenol powerhouses help neutralize oxidative stress — a key driver of chronic inflammation and elevated CRP.</p>
-      </div>
-      <div class="ingredient-card">
-        <span class="ing-icon">🫚</span>
-        <h4>Ginger Root</h4>
-        <p>Used in Japanese traditional medicine for centuries, ginger supports digestive comfort, healthy inflammatory response, and gut motility.</p>
-      </div>
-      <div class="ingredient-card">
-        <span class="ing-icon">🦠</span>
-        <h4>Inulin + Probiotics</h4>
-        <p>Emerging research on the gut-metabolism axis shows that a healthier microbiome directly influences fat storage, insulin sensitivity, and CRP levels.</p>
-      </div>
+      <div class="meta-divider"></div>
+      <div class="meta-read">⏱ 7 min read</div>
     </div>
+  </div>
 
-    <div class="crp-box">
-      <div class="crp-title">⚠️ Understanding CRP & Metabolic Inflammation</div>
-      <p>C-Reactive Protein is measured via a simple blood test. Levels above 1.0 mg/L are considered elevated. Polyphenol-rich plant compounds are among the most studied natural interventions for CRP support.</p>
-    </div>
+  <div class="page-wrap">
 
-    <!-- BOTÃO 2 — Verde Médio -->
-    <div class="btn-wrap">
-      <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" class="btn-mid-green">
-        Check Official Availability
-      </a>
-    </div>
+    <article class="article-body">
 
-    <div class="testimonial-card">
-      <p class="testimonial-text">
-        "I spent three years trying every diet out there. I'd lose 5 pounds, plateau, and then gain it all back. I was exhausted all the time and thought it was just getting older. After reading about CRP and trying this tonic for 60 days — my energy came back first, which surprised me. Then my jeans started fitting looser. I didn't change anything else."
+      <div class="img-block">
+        <img src="/images/presell/v2/hero-okinawa-woman-sunset.webp" alt="Serene Okinawa coastline at sunrise — older woman holding a green powder tonic drink" width="800" height="450" loading="eager" />
+        <div class="img-caption">Traditional morning wellness rituals in Okinawa, Japan — where residents routinely live past 90 in remarkable health.</div>
+      </div>
+
+      <p class="article-lead">
+        If you've ever stuck to a diet for weeks, exercised consistently, and <strong>still couldn't lose the belly weight</strong> — you're not failing. According to emerging research, your body may be fighting against you in a way that no amount of willpower can overcome: a hidden inflammatory marker called <strong>C-Reactive Protein (CRP)</strong>.
       </p>
-      <div class="testimonial-author">
-        <div class="t-avatar">👩</div>
-        <div>
-          <div class="t-name">Sandra M.</div>
-          <div class="t-location">Phoenix, Arizona · Verified Reader</div>
-          <div class="t-stars">★★★★★</div>
-        </div>
+
+      <p>CRP is produced by your liver in response to inflammation. In small amounts, it's normal. But when CRP levels become chronically elevated — which happens gradually in millions of people, often without obvious symptoms — it can essentially <strong>lock fat cells shut</strong>, suppress your metabolism, and drain your energy day after day.</p>
+
+      <p>The frustrating part? Most people have no idea their CRP is elevated. There's no dramatic warning sign. It just quietly works against everything you try.</p>
+
+      <div class="symptom-check">
+        <h4>⚠️ Sound Familiar? Check the Symptoms of High CRP:</h4>
+        <div class="check-item"><span class="check-icon">✗</span> Stubborn belly fat that won't move — no matter your diet</div>
+        <div class="check-item"><span class="check-icon">✗</span> Feeling tired even after a full night's sleep</div>
+        <div class="check-item"><span class="check-icon">✗</span> Bloating, sluggish digestion, and unexplained gut discomfort</div>
+        <div class="check-item"><span class="check-icon">✗</span> Carb cravings — especially in the afternoon</div>
+        <div class="check-item"><span class="check-icon">✗</span> Low motivation, brain fog, and mood swings</div>
+        <div class="check-item"><span class="check-icon">✗</span> Weight returning quickly after dieting</div>
+        <div class="check-item"><span class="check-icon">✗</span> Feeling like your metabolism has "stopped working"</div>
       </div>
-    </div>
 
-    <!-- IMG 03 -->
-    <div class="img-block">
-      <img src="/images/presell/v2/infographic-metabolic-window.webp" alt="Infographic showing the morning metabolic window — body transitioning from rest to fat-oxidation mode" width="800" height="400" loading="lazy" />
-      <div class="img-caption">The morning metabolic window — the first 2–3 hours after waking — is when anti-inflammatory compounds have the greatest impact on fat-burning signaling.</div>
-    </div>
+      <p>If you checked more than two or three of those boxes, there's a very real possibility that <strong>chronic low-grade inflammation</strong> is the invisible wall standing between you and the results you're working so hard for.</p>
 
-    <h2 class="section-heading">⚙️ What Happens When You Take It Daily</h2>
-
-    <p>The tonic is a <strong>powdered formula</strong> — not a pill. You mix one scoop into water and consume it before 10am. No blender required. It mixes easily and has a mild, slightly fruity flavor from the berry blend.</p>
-
-    <p>Most users report a <strong>noticeable shift in energy and digestion first</strong> — typically within the first 1 to 2 weeks. Visible changes in body composition tend to follow in weeks 3 through 8, according to consumer reports.</p>
-
-    <p>This isn't a stimulant product. There's <strong>no caffeine jolt, no jitters, no crash</strong>. The formula works by addressing the underlying inflammatory environment — not by artificially forcing your body to burn more calories.</p>
-
-    <h2 class="section-heading">📊 How It Compares to Typical Weight Loss Approaches</h2>
-
-    <table class="compare-table">
-      <thead>
-        <tr>
-          <th>Feature</th>
-          <th class="highlight-col">Okinawa Tonic</th>
-          <th>Crash Diets</th>
-          <th>Stimulant Fat Burners</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Targets Inflammation (CRP)</td><td class="highlight-col"><span class="yes">✓</span></td><td><span class="no">✗</span></td><td><span class="no">✗</span></td></tr>
-        <tr><td>Supports Gut Health</td><td class="highlight-col"><span class="yes">✓</span></td><td><span class="no">✗</span></td><td><span class="no">✗</span></td></tr>
-        <tr><td>No Caffeine / No Jitters</td><td class="highlight-col"><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="no">✗</span></td></tr>
-        <tr><td>Sustainable Long-Term</td><td class="highlight-col"><span class="yes">✓</span></td><td><span class="no">✗</span></td><td><span class="no">✗</span></td></tr>
-        <tr><td>Polyphenol Antioxidants</td><td class="highlight-col"><span class="yes">✓</span></td><td><span class="no">✗</span></td><td>Partial</td></tr>
-        <tr><td>Money-Back Guarantee</td><td class="highlight-col"><span class="yes">✓</span></td><td><span class="no">✗</span></td><td>Varies</td></tr>
-        <tr><td>Risk Level</td><td class="highlight-col" style="color:#2e7d32;font-weight:800;">Low</td><td style="color:#e65100;font-weight:800;">High</td><td style="color:#c62828;font-weight:800;">High</td></tr>
-      </tbody>
-    </table>
-
-    <div class="testimonial-card">
-      <p class="testimonial-text">
-        "My doctor mentioned my CRP was elevated at my last physical. I started doing research and ended up here. I feel like a different person — more energy, less bloating, and honestly just happier. This tonic has become my non-negotiable morning ritual."
-      </p>
-      <div class="testimonial-author">
-        <div class="t-avatar">👨</div>
-        <div>
-          <div class="t-name">Robert T.</div>
-          <div class="t-location">Tampa, Florida · Verified Reader</div>
-          <div class="t-stars">★★★★★</div>
-        </div>
+      <div class="pull-quote">
+        <p>"When CRP interferes with metabolic signaling, the body essentially becomes resistant to fat-burning — even in a caloric deficit. The problem isn't effort. It's biochemistry."</p>
       </div>
-    </div>
 
-    <!-- IMG 04 -->
-    <div class="img-block">
-      <img src="/images/presell/v2/illustration-tablet-habits.webp" alt="Person reading health information on tablet, modern wellness blog aesthetic" width="800" height="350" loading="lazy" />
-      <div class="img-caption">Common questions answered — what consumers want to know before making a decision.</div>
-    </div>
-
-    <h2 class="section-heading">❓ Frequently Asked Questions</h2>
-
-    <div class="faq-item">
-      <div class="faq-q">Is this formula safe to take daily?</div>
-      <div class="faq-a">The formula is made from botanical ingredients generally recognized as safe. However, individuals with known medical conditions or those taking prescription medications should consult their healthcare provider before starting any new supplement routine.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How long does it take to see results?</div>
-      <div class="faq-a">Most consumers report improvements in energy and digestion within 1–2 weeks. Changes in body composition are typically reported between weeks 3 and 8. Consistent daily use for at least 90 days is commonly recommended for best results.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What if it doesn't work for me?</div>
-      <div class="faq-a">The product is backed by a 90-day money-back guarantee through ClickBank. If you're unsatisfied for any reason, you can return the product within 90 days for a full refund, no questions asked.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Does it contain caffeine or stimulants?</div>
-      <div class="faq-a">The formula contains green and white tea extract, which carry naturally occurring trace amounts of caffeine. However, it is not a stimulant product and does not cause jitters or crash.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Where can I find more information?</div>
-      <div class="faq-a">All product details, ingredient transparency, and purchase options are available on the official website, accessible via the buttons on this page.</div>
-    </div>
-
-    <!-- STRIP FINAL — Botão Amarelo -->
-    <div class="info-strip">
-      <h3>🌅 Ready to Learn More?</h3>
-      <p>Thousands of people have made the Okinawa morning ritual part of their daily routine. Visit the official website for full details, ingredient information, and availability.</p>
-      <div class="btn-wrap" style="margin:0 0 10px;">
-        <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" class="btn-yellow">
-          Visit Official Website
-        </a>
-      </div>
-      <p class="guarantee-note">🔒 90-Day Money-Back Guarantee · Secure ClickBank Checkout</p>
-    </div>
-
-    <div class="disclaimer-strip">
-      <strong>Editorial Disclosure & Disclaimer:</strong> This article is produced by WellnessDailyReport.com for educational and informational purposes only. We may earn an affiliate commission if you click through and purchase via our links, at no additional cost to you. See our full <a href="affiliate-disclosure.html">Affiliate Disclosure</a>. The information in this article has not been evaluated by the FDA and is not intended to diagnose, treat, cure, or prevent any disease. Always consult your healthcare provider before starting any supplement. Individual results vary.
-    </div>
-
-  </article>
-
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-
-    <!-- Product Widget -->
-    <div class="product-widget">
-      <div class="product-widget-badge">⭐ Editor's Pick 2026</div>
-      <div class="product-widget-img">🫙</div>
-      <h3>Okinawa Flat Belly Tonic</h3>
-      <div class="pw-rating">★★★★★</div>
-      <div class="pw-reviews">4.8/5 · 12,400+ reviews</div>
-
-      <!-- Sidebar: 1 único botão -->
-      <div class="btn-wrap" style="margin:0;">
-        <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" class="btn-dark-green" style="font-size:13px;padding:11px 24px;">
+      <div class="btn-wrap">
+        <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" rel="nofollow" class="btn-dark-green">
           Visit Official Website
         </a>
       </div>
 
-      <p class="pw-guarantee">🔒 90-Day Money-Back Guarantee</p>
-    </div>
+      <h2 class="section-heading">🏝️ What the People of Okinawa Figured Out Centuries Ago</h2>
 
-    <!-- Ratings -->
-    <div class="sidebar-widget">
-      <div class="widget-title">📊 Consumer Ratings</div>
-      <div class="overall-rating">
-        <div class="big-score">4.8</div>
-        <div class="big-stars">★★★★★</div>
-        <div class="big-label">Based on 12,400+ verified reviews</div>
-      </div>
-      <div class="rating-row">
-        <div class="rating-label">Energy</div>
-        <div class="rating-bar"><div class="rating-fill" style="width:91%"></div></div>
-        <div class="rating-pct">91%</div>
-      </div>
-      <div class="rating-row">
-        <div class="rating-label">Digestion</div>
-        <div class="rating-bar"><div class="rating-fill" style="width:88%"></div></div>
-        <div class="rating-pct">88%</div>
-      </div>
-      <div class="rating-row">
-        <div class="rating-label">Weight Loss</div>
-        <div class="rating-bar"><div class="rating-fill" style="width:84%"></div></div>
-        <div class="rating-pct">84%</div>
-      </div>
-      <div class="rating-row">
-        <div class="rating-label">Taste / Mix</div>
-        <div class="rating-bar"><div class="rating-fill" style="width:79%"></div></div>
-        <div class="rating-pct">79%</div>
-      </div>
-      <div class="rating-row">
-        <div class="rating-label">Value</div>
-        <div class="rating-bar"><div class="rating-fill" style="width:86%"></div></div>
-        <div class="rating-pct">86%</div>
-      </div>
-    </div>
+      <p>Okinawa, Japan holds a fascinating record: it's home to one of the <strong>highest concentrations of centenarians on Earth</strong>. Women in Okinawa not only live longer — they tend to stay lean, energetic, and mentally sharp well into their 80s and 90s.</p>
 
-    <!-- Trust Badges -->
-    <div class="sidebar-widget">
-      <div class="widget-title">🛡️ Why Consumers Trust It</div>
-      <div class="trust-item">
-        <div class="trust-icon">🔒</div>
-        <div class="trust-text"><strong>90-Day Money-Back Guarantee</strong><br>Full refund — even on empty bottles</div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">🏪</div>
-        <div class="trust-text"><strong>Sold via ClickBank</strong><br>World's most trusted digital marketplace</div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">🌿</div>
-        <div class="trust-text"><strong>Natural Botanical Formula</strong><br>No synthetic stimulants</div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">📦</div>
-        <div class="trust-text"><strong>Ships Worldwide</strong><br>Discreet packaging, fast delivery</div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">💳</div>
-        <div class="trust-text"><strong>Secure Checkout</strong><br>256-bit SSL encryption</div>
-      </div>
-    </div>
+      <p>Researchers studying the "Blue Zone" of Okinawa have identified several lifestyle habits that likely contribute — but one recurring pattern stands out among the women: <strong>a polyphenol-rich morning drink</strong> made from fermented plant extracts, teas, and botanical compounds consumed before 10am.</p>
 
-    <!-- Related Posts -->
-    <div class="sidebar-widget">
-      <div class="widget-title">📚 Related Articles</div>
-      <a href="#" class="related-item">
-        <div class="related-thumb" style="background:#e8f5e9;">🔥</div>
-        <div class="related-info">
-          <div class="related-title">5 Signs Your Metabolism Has Slowed Down</div>
-          <div class="related-date">June 2026</div>
-        </div>
-      </a>
-      <a href="#" class="related-item">
-        <div class="related-thumb" style="background:#fff3e0;">🫀</div>
-        <div class="related-info">
-          <div class="related-title">What Is CRP and Why Does Your Doctor Keep Testing It?</div>
-          <div class="related-date">May 2026</div>
-        </div>
-      </a>
-      <a href="#" class="related-item">
-        <div class="related-thumb" style="background:#e3f2fd;">🍵</div>
-        <div class="related-info">
-          <div class="related-title">The Okinawan Diet: What 100-Year-Olds Actually Eat</div>
-          <div class="related-date">April 2026</div>
-        </div>
-      </a>
-      <a href="#" class="related-item">
-        <div class="related-thumb" style="background:#fce4ec;">🦠</div>
-        <div class="related-info">
-          <div class="related-title">Gut Health & Weight Gain: The Connection Nobody Talks About</div>
-          <div class="related-date">March 2026</div>
-        </div>
-      </a>
-    </div>
+      <p>Why does timing matter? Because the <strong>morning metabolic window</strong> — the first 2-3 hours after waking — is when your body is primed to shift into fat-oxidation mode. Flooding your system with anti-inflammatory polyphenols during this window appears to directly counteract elevated CRP levels, allowing your metabolism to function the way it was designed to.</p>
 
-    <!-- Sidebar CTA widget -->
-    <div class="sidebar-widget" style="background:linear-gradient(135deg,#e8f5e9,#f1f8e9);border:2px solid #a5d6a7;">
-      <div class="widget-title" style="border-bottom-color:#a5d6a7;">🔍 Want Full Details?</div>
-      <p style="font-size:13px;color:#444;margin-bottom:14px;">Visit the official website for complete ingredient information, usage instructions and availability.</p>
-      <div class="btn-wrap" style="margin:0;">
-        <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" class="btn-mid-green" style="font-size:13px;padding:11px 24px;">
+      <div class="img-block">
+        <img src="/images/presell/v2/hero-ingredients-bowls.webp" alt="Flat lay of natural wellness ingredients — green tea powder, hibiscus flowers, acai berries, ginger root, black pepper" width="800" height="450" loading="lazy" />
+        <div class="img-caption">The polyphenol-rich botanicals associated with traditional Okinawan morning wellness routines.</div>
+      </div>
+
+      <h2 class="section-heading-accent">🔬 The Key Compounds Behind the Ritual</h2>
+
+      <p>Modern supplement science has attempted to isolate and concentrate the most bioactive compounds from this traditional approach. Here's what the research says about the most important ingredients:</p>
+
+      <div class="ingredient-grid">
+        <div class="ingredient-card">
+          <span class="ing-icon">🍵</span>
+          <h4>EGCG (Green & White Tea)</h4>
+          <p>Catechins in green tea extract are linked to fat oxidation and thermogenesis. A 2010 review in the <em>Journal of the American College of Nutrition</em> noted modest but consistent metabolic support from EGCG supplementation.</p>
+        </div>
+        <div class="ingredient-card">
+          <span class="ing-icon">🫙</span>
+          <h4>Piperine (Black Pepper)</h4>
+          <p>Extracted from black pepper, piperine enhances the bioavailability of other compounds by up to 2000%. It also supports thermogenesis and may help reduce fat accumulation.</p>
+        </div>
+        <div class="ingredient-card">
+          <span class="ing-icon">🌺</span>
+          <h4>Hibiscus Sabdariffa</h4>
+          <p>A staple of Okinawan-inspired formulas, hibiscus is rich in anthocyanins. Studies suggest it supports healthy blood pressure, digestion, and lipid metabolism.</p>
+        </div>
+        <div class="ingredient-card">
+          <span class="ing-icon">🫐</span>
+          <h4>Acai & Aronia Berry</h4>
+          <p>Two of the most antioxidant-dense fruits known to nutritional science. These polyphenol powerhouses help neutralize oxidative stress — a key driver of chronic inflammation and elevated CRP.</p>
+        </div>
+        <div class="ingredient-card">
+          <span class="ing-icon">🫚</span>
+          <h4>Ginger Root</h4>
+          <p>Used in Japanese traditional medicine for centuries, ginger supports digestive comfort, healthy inflammatory response, and gut motility.</p>
+        </div>
+        <div class="ingredient-card">
+          <span class="ing-icon">🦠</span>
+          <h4>Inulin + Probiotics</h4>
+          <p>Emerging research on the gut-metabolism axis shows that a healthier microbiome directly influences fat storage, insulin sensitivity, and CRP levels.</p>
+        </div>
+      </div>
+
+      <div class="crp-box">
+        <div class="crp-title">⚠️ Understanding CRP & Metabolic Inflammation</div>
+        <p>C-Reactive Protein is measured via a simple blood test. Levels above 1.0 mg/L are considered elevated. Polyphenol-rich plant compounds are among the most studied natural interventions for CRP support.</p>
+      </div>
+
+      <div class="btn-wrap">
+        <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" rel="nofollow" class="btn-mid-green">
           Check Official Availability
         </a>
       </div>
-      <p style="font-size:11px;color:#888;text-align:center;margin-top:14px;">🔒 Secure · 90-Day Guarantee</p>
+
+      <div class="testimonial-card">
+        <p class="testimonial-text">
+          "I spent three years trying every diet out there. I'd lose 5 pounds, plateau, and then gain it all back. I was exhausted all the time and thought it was just getting older. After reading about CRP and trying this tonic for 60 days — my energy came back first, which surprised me. Then my jeans started fitting looser. I didn't change anything else."
+        </p>
+        <div class="testimonial-author">
+          <div class="t-avatar">👩</div>
+          <div>
+            <div class="t-name">Sandra M.</div>
+            <div class="t-location">Phoenix, Arizona · Verified Reader</div>
+            <div class="t-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-block">
+        <img src="/images/presell/v2/infographic-metabolic-window.webp" alt="Infographic showing the morning metabolic window — body transitioning from rest to fat-oxidation mode" width="800" height="400" loading="lazy" />
+        <div class="img-caption">The morning metabolic window — the first 2–3 hours after waking — is when anti-inflammatory compounds have the greatest impact on fat-burning signaling.</div>
+      </div>
+
+      <h2 class="section-heading">⚙️ What Happens When You Take It Daily</h2>
+
+      <p>The tonic is a <strong>powdered formula</strong> — not a pill. You mix one scoop into water and consume it before 10am. No blender required. It mixes easily and has a mild, slightly fruity flavor from the berry blend.</p>
+
+      <p>Most users report a <strong>noticeable shift in energy and digestion first</strong> — typically within the first 1 to 2 weeks. Visible changes in body composition tend to follow in weeks 3 through 8, according to consumer reports.</p>
+
+      <p>This isn't a stimulant product. There's <strong>no caffeine jolt, no jitters, no crash</strong>. The formula works by addressing the underlying inflammatory environment — not by artificially forcing your body to burn more calories.</p>
+
+      <h2 class="section-heading">📊 How It Compares to Typical Weight Loss Approaches</h2>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th class="highlight-col">Okinawa Tonic</th>
+            <th>Crash Diets</th>
+            <th>Stimulant Fat Burners</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Targets Inflammation (CRP)</td><td class="highlight-col"><span class="yes">✓</span></td><td><span class="no">✗</span></td><td><span class="no">✗</span></td></tr>
+          <tr><td>Supports Gut Health</td><td class="highlight-col"><span class="yes">✓</span></td><td><span class="no">✗</span></td><td><span class="no">✗</span></td></tr>
+          <tr><td>No Caffeine / No Jitters</td><td class="highlight-col"><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="no">✗</span></td></tr>
+          <tr><td>Sustainable Long-Term</td><td class="highlight-col"><span class="yes">✓</span></td><td><span class="no">✗</span></td><td><span class="no">✗</span></td></tr>
+          <tr><td>Polyphenol Antioxidants</td><td class="highlight-col"><span class="yes">✓</span></td><td><span class="no">✗</span></td><td>Partial</td></tr>
+          <tr><td>Money-Back Guarantee</td><td class="highlight-col"><span class="yes">✓</span></td><td><span class="no">✗</span></td><td>Varies</td></tr>
+          <tr><td>Risk Level</td><td class="highlight-col" style="color:#2e7d32;font-weight:800;">Low</td><td style="color:#e65100;font-weight:800;">High</td><td style="color:#c62828;font-weight:800;">High</td></tr>
+        </tbody>
+      </table>
+
+      <div class="testimonial-card">
+        <p class="testimonial-text">
+          "My doctor mentioned my CRP was elevated at my last physical. I started doing research and ended up here. I feel like a different person — more energy, less bloating, and honestly just happier. This tonic has become my non-negotiable morning ritual."
+        </p>
+        <div class="testimonial-author">
+          <div class="t-avatar">👨</div>
+          <div>
+            <div class="t-name">Robert T.</div>
+            <div class="t-location">Tampa, Florida · Verified Reader</div>
+            <div class="t-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-block">
+        <img src="/images/presell/v2/illustration-tablet-habits.webp" alt="Person reading health information on tablet, modern wellness blog aesthetic" width="800" height="350" loading="lazy" />
+        <div class="img-caption">Common questions answered — what consumers want to know before making a decision.</div>
+      </div>
+
+      <h2 class="section-heading">❓ Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Is this formula safe to take daily?</div>
+        <div class="faq-a">The formula is made from botanical ingredients generally recognized as safe. However, individuals with known medical conditions or those taking prescription medications should consult their healthcare provider before starting any new supplement routine.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does it take to see results?</div>
+        <div class="faq-a">Most consumers report improvements in energy and digestion within 1–2 weeks. Changes in body composition are typically reported between weeks 3 and 8. Consistent daily use for at least 90 days is commonly recommended for best results.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if it doesn't work for me?</div>
+        <div class="faq-a">The product is backed by a 90-day money-back guarantee through ClickBank. If you're unsatisfied for any reason, you can return the product within 90 days for a full refund, no questions asked.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does it contain caffeine or stimulants?</div>
+        <div class="faq-a">The formula contains green and white tea extract, which carry naturally occurring trace amounts of caffeine. However, it is not a stimulant product and does not cause jitters or crash.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Where can I find more information?</div>
+        <div class="faq-a">All product details, ingredient transparency, and purchase options are available on the official website, accessible via the buttons on this page.</div>
+      </div>
+
+      <div class="info-strip">
+        <h3>🌅 Ready to Learn More?</h3>
+        <p>Thousands of people have made the Okinawa morning ritual part of their daily routine. Visit the official website for full details, ingredient information, and availability.</p>
+        <div class="btn-wrap" style="margin:0 0 10px;">
+          <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" rel="nofollow" class="btn-yellow">
+            Visit Official Website
+          </a>
+        </div>
+        <p class="guarantee-note">🔒 90-Day Money-Back Guarantee · Secure ClickBank Checkout</p>
+      </div>
+
+      <div class="disclaimer-strip">
+        <strong>Editorial Disclosure & Disclaimer:</strong> This article is produced by WellnessDailyReport.com for educational and informational purposes only. We may earn an affiliate commission if you click through and purchase via our links, at no additional cost to you. See our full <a href="/affiliate-disclosure">Affiliate Disclosure</a>. The information in this article has not been evaluated by the FDA and is not intended to diagnose, treat, cure, or prevent any disease. Always consult your healthcare provider before starting any supplement. Individual results vary.
+      </div>
+
+    </article>
+
+    <aside class="sidebar">
+
+      <div class="product-widget">
+        <div class="product-widget-badge">⭐ Editor's Pick 2026</div>
+        <div class="product-widget-img">🫙</div>
+        <h3>Okinawa Flat Belly Tonic</h3>
+        <div class="pw-rating">★★★★★</div>
+        <div class="pw-reviews">4.8/5 · 12,400+ reviews</div>
+
+        <div class="btn-wrap" style="margin:0;">
+          <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" rel="nofollow" class="btn-dark-green" style="font-size:13px;padding:11px 24px;">
+            Visit Official Website
+          </a>
+        </div>
+
+        <p class="pw-guarantee">🔒 90-Day Money-Back Guarantee</p>
+      </div>
+
+      <div class="sidebar-widget">
+        <div class="widget-title">📊 Consumer Ratings</div>
+        <div class="overall-rating">
+          <div class="big-score">4.8</div>
+          <div class="big-stars">★★★★★</div>
+          <div class="big-label">Based on 12,400+ verified reviews</div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">Energy</div>
+          <div class="rating-bar"><div class="rating-fill" style="width:91%"></div></div>
+          <div class="rating-pct">91%</div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">Digestion</div>
+          <div class="rating-bar"><div class="rating-fill" style="width:88%"></div></div>
+          <div class="rating-pct">88%</div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">Weight Loss</div>
+          <div class="rating-bar"><div class="rating-fill" style="width:84%"></div></div>
+          <div class="rating-pct">84%</div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">Taste / Mix</div>
+          <div class="rating-bar"><div class="rating-fill" style="width:79%"></div></div>
+          <div class="rating-pct">79%</div>
+        </div>
+        <div class="rating-row">
+          <div class="rating-label">Value</div>
+          <div class="rating-bar"><div class="rating-fill" style="width:86%"></div></div>
+          <div class="rating-pct">86%</div>
+        </div>
+      </div>
+
+      <div class="sidebar-widget">
+        <div class="widget-title">🛡️ Why Consumers Trust It</div>
+        <div class="trust-item">
+          <div class="trust-icon">🔒</div>
+          <div class="trust-text"><strong>90-Day Money-Back Guarantee</strong><br>Full refund — even on empty bottles</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🏪</div>
+          <div class="trust-text"><strong>Sold via ClickBank</strong><br>World's most trusted digital marketplace</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🌿</div>
+          <div class="trust-text"><strong>Natural Botanical Formula</strong><br>No synthetic stimulants</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">📦</div>
+          <div class="trust-text"><strong>Ships Worldwide</strong><br>Discreet packaging, fast delivery</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">💳</div>
+          <div class="trust-text"><strong>Secure Checkout</strong><br>256-bit SSL encryption</div>
+        </div>
+      </div>
+
+      <div class="sidebar-widget">
+        <div class="widget-title">📚 Related Articles</div>
+        <a href="#" class="related-item">
+          <div class="related-thumb" style="background:#e8f5e9;">🔥</div>
+          <div class="related-info">
+            <div class="related-title">5 Signs Your Metabolism Has Slowed Down</div>
+            <div class="related-date">June 2026</div>
+          </div>
+        </a>
+        <a href="#" class="related-item">
+          <div class="related-thumb" style="background:#fff3e0;">🫀</div>
+          <div class="related-info">
+            <div class="related-title">What Is CRP and Why Does Your Doctor Keep Testing It?</div>
+            <div class="related-date">May 2026</div>
+          </div>
+        </a>
+        <a href="#" class="related-item">
+          <div class="related-thumb" style="background:#e3f2fd;">🍵</div>
+          <div class="related-info">
+            <div class="related-title">The Okinawan Diet: What 100-Year-Olds Actually Eat</div>
+            <div class="related-date">April 2026</div>
+          </div>
+        </a>
+        <a href="#" class="related-item">
+          <div class="related-thumb" style="background:#fce4ec;">🦠</div>
+          <div class="related-info">
+            <div class="related-title">Gut Health & Weight Gain: The Connection Nobody Talks About</div>
+            <div class="related-date">March 2026</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="sidebar-widget" style="background:linear-gradient(135deg,#e8f5e9,#f1f8e9);border:2px solid #a5d6a7;">
+        <div class="widget-title" style="border-bottom-color:#a5d6a7;">🔍 Want Full Details?</div>
+        <p style="font-size:13px;color:#444;margin-bottom:14px;">Visit the official website for complete ingredient information, usage instructions and availability.</p>
+        <div class="btn-wrap" style="margin:0;">
+          <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" rel="nofollow" class="btn-mid-green" style="font-size:13px;padding:11px 24px;">
+            Check Official Availability
+          </a>
+        </div>
+        <p style="font-size:11px;color:#888;text-align:center;margin-top:14px;">🔒 Secure · 90-Day Guarantee</p>
+      </div>
+
+    </aside>
+
+  </div><!-- /page-wrap -->
+
+  <footer class="site-footer">
+    <p>© 2026 WellnessDailyReport.com — Independent Educational Resource. Not affiliated with ClickBank, Inc. or any product manufacturer.</p>
+    <div class="footer-links">
+      <a href="/privacy-policy">Privacy Policy</a> &nbsp;|&nbsp;
+      <a href="/disclaimer">Disclaimer</a> &nbsp;|&nbsp;
+      <a href="/affiliate-disclosure">Affiliate Disclosure</a> &nbsp;|&nbsp;
+      <a href="/contact">Contact</a>
     </div>
+    <p style="margin-top:12px;font-size:10px;color:#555;">
+      This site is not part of the Facebook website or Facebook Inc. FACEBOOK is a trademark of FACEBOOK, Inc.<br>
+      ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales Inc., a Delaware corporation. ClickBank's role as retailer does not constitute an endorsement, approval or review of these products.
+    </p>
+  </footer>
 
-  </aside>
+  <script>
+    window.addEventListener('scroll', function () {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const bar = document.getElementById('progressBar');
+      if (bar) bar.style.width = ((scrollTop / scrollHeight) * 100) + '%';
+    });
+  </script>
 
-</div><!-- /page-wrap -->
-
-<footer class="site-footer">
-  <p>© 2026 WellnessDailyReport.com — Independent Educational Resource. Not affiliated with ClickBank, Inc. or any product manufacturer.</p>
-  <div class="footer-links">
-    <a href="/privacy-policy">Privacy Policy</a> &nbsp;|&nbsp;
-    <a href="/disclaimer">Disclaimer</a> &nbsp;|&nbsp;
-    <a href="/affiliate-disclosure">Affiliate Disclosure</a> &nbsp;|&nbsp;
-    <a href="/contact">Contact</a>
-  </div>
-  <p style="margin-top:12px;font-size:10px;color:#555;">
-    This site is not part of the Facebook website or Facebook Inc. FACEBOOK is a trademark of FACEBOOK, Inc.<br>
-    ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales Inc., a Delaware corporation. ClickBank's role as retailer does not constitute an endorsement, approval or review of these products.
-  </p>
-</footer>
-
-<script>
-  window.addEventListener('scroll', function () {
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    document.getElementById('progressBar').style.width = ((scrollTop / scrollHeight) * 100) + '%';
-  });
-</script>
-
-</body>
-</html>
+</Layout>
