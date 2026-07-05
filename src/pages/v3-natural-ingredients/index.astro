@@ -1,942 +1,908 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Why You Can't Sleep AND Can't Lose Weight — HealthWatchDaily</title>
-  <meta name="description" content="Scientists now link poor sleep directly to stubborn belly fat through a stress hormone that locks your fat cells. Here's what Okinawan longevity research reveals." />
+---
+import Layout from '../../layouts/Layout.astro';
 
-  <script>
-    !function(f,b,e,v,n,t,s){
-      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window,document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'YOUR_PIXEL_ID');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
-  </noscript>
+const title = "Why You Can't Sleep AND Can't Lose Weight — HealthWatchDaily";
+const description = "Scientists now link poor sleep directly to stubborn belly fat through a stress hormone that locks your fat cells. Here's what Okinawan longevity research reveals.";
+---
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
+<Layout title={title}>
+  <Fragment slot="head">
+    <meta name="description" content={description} />
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-XXXXXXXXXX');
-  </script>
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: 'Georgia', serif;
+        background: #f4f1eb;
+        color: #1e1e1e;
+        font-size: 17px;
+        line-height: 1.8;
+      }
 
-    body {
-      font-family: 'Georgia', serif;
-      background: #f4f1eb;
-      color: #1e1e1e;
-      font-size: 17px;
-      line-height: 1.8;
-    }
+      .progress-bar {
+        position: fixed; top: 0; left: 0; height: 3px;
+        width: 0%; background: #c0392b; z-index: 9999;
+        transition: width 0.2s ease;
+      }
 
-    .progress-bar {
-      position: fixed; top: 0; left: 0; height: 3px;
-      width: 0%; background: #c0392b; z-index: 9999;
-      transition: width 0.2s ease;
-    }
+      .top-banner {
+        background: #1a1a1a;
+        color: #f0e6c8;
+        text-align: center;
+        padding: 9px 16px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+      }
+      .top-banner strong { color: #e8c96d; }
 
-    .top-banner {
-      background: #1a1a1a;
-      color: #f0e6c8;
-      text-align: center;
-      padding: 9px 16px;
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      letter-spacing: 0.04em;
-    }
-    .top-banner strong { color: #e8c96d; }
+      .masthead {
+        background: #fff;
+        border-bottom: 3px solid #c0392b;
+        padding: 14px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .masthead-logo {
+        font-family: 'Georgia', serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: #1a1a1a;
+        letter-spacing: -0.5px;
+      }
+      .masthead-logo span { color: #c0392b; }
+      .masthead-meta {
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        color: #888;
+        text-align: right;
+      }
+      .masthead-nav {
+        width: 100%;
+        display: flex;
+        gap: 18px;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: #555;
+      }
+      .masthead-nav span { cursor: pointer; }
+      .masthead-nav span:hover { color: #c0392b; }
+      .masthead-nav .active { color: #c0392b; font-weight: 700; }
 
-    .masthead {
-      background: #fff;
-      border-bottom: 3px solid #c0392b;
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .masthead-logo {
-      font-family: 'Georgia', serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: #1a1a1a;
-      letter-spacing: -0.5px;
-    }
-    .masthead-logo span { color: #c0392b; }
-    .masthead-meta {
-      font-family: Arial, sans-serif;
-      font-size: 11px;
-      color: #888;
-      text-align: right;
-    }
-    .masthead-nav {
-      width: 100%;
-      display: flex;
-      gap: 18px;
-      border-top: 1px solid #eee;
-      padding-top: 10px;
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      color: #555;
-    }
-    .masthead-nav span { cursor: pointer; }
-    .masthead-nav span:hover { color: #c0392b; }
-    .masthead-nav .active { color: #c0392b; font-weight: 700; }
+      .page-wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 32px 16px 60px;
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 36px;
+        align-items: start;
+      }
+      @media (max-width: 768px) {
+        .page-wrap { grid-template-columns: 1fr; }
+        .sidebar { order: 2; }
+      }
 
-    .page-wrap {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 32px 16px 60px;
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 36px;
-      align-items: start;
-    }
-    @media (max-width: 768px) {
-      .page-wrap { grid-template-columns: 1fr; }
-      .sidebar { order: 2; }
-    }
+      .article-category {
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        color: #c0392b;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .article-title {
+        font-family: 'Georgia', serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.25;
+        color: #111;
+        margin-bottom: 14px;
+      }
+      @media (max-width: 600px) {
+        .article-title { font-size: 24px; }
+      }
+      .article-subtitle {
+        font-size: 18px;
+        color: #444;
+        font-style: italic;
+        border-left: 4px solid #c0392b;
+        padding-left: 14px;
+        margin-bottom: 18px;
+        line-height: 1.5;
+      }
+      .article-byline {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: #888;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .byline-dot { color: #ccc; }
+      .byline-share { margin-left: auto; display: flex; gap: 8px; }
+      .share-btn {
+        font-size: 11px;
+        padding: 4px 10px;
+        border-radius: 3px;
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+        cursor: pointer;
+        border: none;
+        outline: none;
+      }
+      .share-fb  { background: #1877f2; color: #fff; }
+      .share-tw  { background: #1da1f2; color: #fff; }
+      .share-em  { background: #555; color: #fff; }
 
-    .article-category {
-      font-family: Arial, sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      color: #c0392b;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    .article-title {
-      font-family: 'Georgia', serif;
-      font-size: 32px;
-      font-weight: 700;
-      line-height: 1.25;
-      color: #111;
-      margin-bottom: 14px;
-    }
-    @media (max-width: 600px) {
-      .article-title { font-size: 24px; }
-    }
-    .article-subtitle {
-      font-size: 18px;
-      color: #444;
-      font-style: italic;
-      border-left: 4px solid #c0392b;
-      padding-left: 14px;
-      margin-bottom: 18px;
-      line-height: 1.5;
-    }
-    .article-byline {
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      color: #888;
-      padding-bottom: 16px;
-      border-bottom: 1px solid #ddd;
-      margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .byline-dot { color: #ccc; }
-    .byline-share { margin-left: auto; display: flex; gap: 8px; }
-    .share-btn {
-      font-size: 11px;
-      padding: 4px 10px;
-      border-radius: 3px;
-      font-family: Arial, sans-serif;
-      font-weight: 700;
-      cursor: pointer;
-      border: none;
-      outline: none;
-    }
-    .share-fb  { background: #1877f2; color: #fff; }
-    .share-tw  { background: #1da1f2; color: #fff; }
-    .share-em  { background: #555; color: #fff; }
+      .img-block { margin: 28px 0; }
+      .img-block img { width: 100%; border-radius: 8px; display: block; }
+      .img-caption {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: #888;
+        text-align: center;
+        margin-top: 8px;
+        font-style: italic;
+      }
 
-    .img-block { margin: 28px 0; }
-    .img-block img { width: 100%; border-radius: 8px; display: block; }
-    .img-caption {
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      color: #888;
-      text-align: center;
-      margin-top: 8px;
-      font-style: italic;
-    }
+      .article-body p { margin-bottom: 18px; }
+      .article-lead {
+        font-size: 19px;
+        font-weight: 500;
+        color: #222;
+        border-left: 4px solid #e8c96d;
+        padding-left: 16px;
+        margin-bottom: 22px;
+      }
 
-    .article-body p { margin-bottom: 18px; }
-    .article-lead {
-      font-size: 19px;
-      font-weight: 500;
-      color: #222;
-      border-left: 4px solid #e8c96d;
-      padding-left: 16px;
-      margin-bottom: 22px;
-    }
+      .symptom-box {
+        background: #fff8f6;
+        border: 1px solid #f0d0c8;
+        border-radius: 10px;
+        padding: 22px 24px;
+        margin: 28px 0;
+      }
+      .symptom-box h3 {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: #c0392b;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 14px;
+      }
+      .symptom-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+      }
+      .symptom-icon { color: #c0392b; font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+      .symptom-item:last-child { margin-bottom: 0; }
 
-    .symptom-box {
-      background: #fff8f6;
-      border: 1px solid #f0d0c8;
-      border-radius: 10px;
-      padding: 22px 24px;
-      margin: 28px 0;
-    }
-    .symptom-box h3 {
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      color: #c0392b;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 14px;
-    }
-    .symptom-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 10px;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      color: #333;
-    }
-    .symptom-icon { color: #c0392b; font-size: 16px; flex-shrink: 0; margin-top: 2px; }
-    .symptom-item:last-child { margin-bottom: 0; }
+      .pull-quote {
+        background: #1a1a2e;
+        color: #e8c96d;
+        border-radius: 10px;
+        padding: 28px 30px;
+        margin: 32px 0;
+        font-style: italic;
+        font-size: 18px;
+        line-height: 1.65;
+        position: relative;
+      }
+      .pull-quote::before {
+        content: '"';
+        font-size: 90px;
+        color: rgba(232,201,109,0.12);
+        position: absolute;
+        top: 5px; left: 18px;
+        font-family: Georgia, serif;
+        line-height: 1;
+      }
+      .pull-quote p { position: relative; z-index: 1; }
+      .pull-quote cite {
+        display: block;
+        margin-top: 14px;
+        font-size: 13px;
+        color: rgba(232,201,109,0.7);
+        font-style: normal;
+        font-family: Arial, sans-serif;
+      }
 
-    .pull-quote {
-      background: #1a1a2e;
-      color: #e8c96d;
-      border-radius: 10px;
-      padding: 28px 30px;
-      margin: 32px 0;
-      font-style: italic;
-      font-size: 18px;
-      line-height: 1.65;
-      position: relative;
-    }
-    .pull-quote::before {
-      content: '"';
-      font-size: 90px;
-      color: rgba(232,201,109,0.12);
-      position: absolute;
-      top: 5px; left: 18px;
-      font-family: Georgia, serif;
-      line-height: 1;
-    }
-    .pull-quote p { position: relative; z-index: 1; }
-    .pull-quote cite {
-      display: block;
-      margin-top: 14px;
-      font-size: 13px;
-      color: rgba(232,201,109,0.7);
-      font-style: normal;
-      font-family: Arial, sans-serif;
-    }
+      .section-heading {
+        font-family: 'Georgia', serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: #111;
+        margin: 36px 0 14px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #e0dbd0;
+      }
+      .section-subheading {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: #333;
+        margin: 24px 0 8px;
+      }
 
-    .section-heading {
-      font-family: 'Georgia', serif;
-      font-size: 24px;
-      font-weight: 700;
-      color: #111;
-      margin: 36px 0 14px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #e0dbd0;
-    }
-    .section-subheading {
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-      color: #333;
-      margin: 24px 0 8px;
-    }
+      .loop-box {
+        background: linear-gradient(135deg, #1a1a2e 0%, #2c1810 100%);
+        border-radius: 12px;
+        padding: 28px 24px;
+        margin: 32px 0;
+        color: #f0e6c8;
+      }
+      .loop-box h3 {
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: #e8c96d;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 18px;
+        text-align: center;
+      }
+      .loop-step { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
+      .loop-num {
+        background: #c0392b;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 800;
+        width: 28px; height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .loop-text { font-family: Arial, sans-serif; font-size: 14px; line-height: 1.5; color: #e0d5c0; }
+      .loop-text strong { color: #e8c96d; }
+      .loop-arrow { text-align: center; color: #c0392b; font-size: 20px; margin: -6px 0; }
 
-    .loop-box {
-      background: linear-gradient(135deg, #1a1a2e 0%, #2c1810 100%);
-      border-radius: 12px;
-      padding: 28px 24px;
-      margin: 32px 0;
-      color: #f0e6c8;
-    }
-    .loop-box h3 {
-      font-family: Arial, sans-serif;
-      font-size: 15px;
-      font-weight: 700;
-      color: #e8c96d;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 18px;
-      text-align: center;
-    }
-    .loop-step { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
-    .loop-num {
-      background: #c0392b;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      font-weight: 800;
-      width: 28px; height: 28px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .loop-text { font-family: Arial, sans-serif; font-size: 14px; line-height: 1.5; color: #e0d5c0; }
-    .loop-text strong { color: #e8c96d; }
-    .loop-arrow { text-align: center; color: #c0392b; font-size: 20px; margin: -6px 0; }
+      .ingredients-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 16px;
+        margin: 24px 0;
+      }
+      .ingredient-card {
+        background: #fff;
+        border: 1px solid #e8e0d5;
+        border-radius: 10px;
+        padding: 18px 16px;
+      }
+      .ingredient-icon { font-size: 28px; margin-bottom: 8px; }
+      .ingredient-name { font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; color: #1a5e20; margin-bottom: 5px; }
+      .ingredient-desc { font-family: Arial, sans-serif; font-size: 12px; color: #666; line-height: 1.5; }
 
-    .ingredients-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 16px;
-      margin: 24px 0;
-    }
-    .ingredient-card {
-      background: #fff;
-      border: 1px solid #e8e0d5;
-      border-radius: 10px;
-      padding: 18px 16px;
-    }
-    .ingredient-icon { font-size: 28px; margin-bottom: 8px; }
-    .ingredient-name { font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; color: #1a5e20; margin-bottom: 5px; }
-    .ingredient-desc { font-family: Arial, sans-serif; font-size: 12px; color: #666; line-height: 1.5; }
+      .science-strip {
+        background: #eaf4ea;
+        border-left: 5px solid #2e7d32;
+        border-radius: 0 10px 10px 0;
+        padding: 18px 20px;
+        margin: 28px 0;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        color: #2c4a2c;
+      }
+      .science-strip strong { display: block; margin-bottom: 6px; font-size: 14px; color: #1b5e20; }
 
-    .science-strip {
-      background: #eaf4ea;
-      border-left: 5px solid #2e7d32;
-      border-radius: 0 10px 10px 0;
-      padding: 18px 20px;
-      margin: 28px 0;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      color: #2c4a2c;
-    }
-    .science-strip strong { display: block; margin-bottom: 6px; font-size: 14px; color: #1b5e20; }
+      .testimonial-card {
+        background: linear-gradient(135deg, #1a1a2e, #0d3b1e);
+        border-radius: 14px;
+        padding: 28px 28px 24px;
+        margin: 32px 0;
+        position: relative;
+      }
+      .testimonial-card::before {
+        content: '"';
+        font-family: Georgia, serif;
+        font-size: 80px;
+        color: rgba(255,255,255,0.06);
+        position: absolute;
+        top: 10px; left: 20px;
+        line-height: 1;
+      }
+      .testimonial-text {
+        font-family: Georgia, serif;
+        font-size: 17px;
+        line-height: 1.7;
+        color: #ffffff;
+        margin-bottom: 18px;
+        position: relative;
+        z-index: 1;
+        font-style: italic;
+      }
+      .t-author { display: flex; align-items: center; gap: 14px; }
+      .t-avatar {
+        width: 46px; height: 46px;
+        border-radius: 50%;
+        background: #2e7d32;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 22px; flex-shrink: 0;
+      }
+      .t-name  { font-family: Arial, sans-serif; font-weight: 700; font-size: 15px; color: #ffffff; }
+      .t-location { font-family: Arial, sans-serif; font-size: 12px; color: rgba(255,255,255,0.72); }
+      .t-stars { color: #f9a825; font-size: 15px; margin-top: 3px; }
 
-    .testimonial-card {
-      background: linear-gradient(135deg, #1a1a2e, #0d3b1e);
-      border-radius: 14px;
-      padding: 28px 28px 24px;
-      margin: 32px 0;
-      position: relative;
-    }
-    .testimonial-card::before {
-      content: '"';
-      font-family: Georgia, serif;
-      font-size: 80px;
-      color: rgba(255,255,255,0.06);
-      position: absolute;
-      top: 10px; left: 20px;
-      line-height: 1;
-    }
-    .testimonial-text {
-      font-family: Georgia, serif;
-      font-size: 17px;
-      line-height: 1.7;
-      color: #ffffff;
-      margin-bottom: 18px;
-      position: relative;
-      z-index: 1;
-      font-style: italic;
-    }
-    .t-author { display: flex; align-items: center; gap: 14px; }
-    .t-avatar {
-      width: 46px; height: 46px;
-      border-radius: 50%;
-      background: #2e7d32;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 22px; flex-shrink: 0;
-    }
-    .t-name  { font-family: Arial, sans-serif; font-weight: 700; font-size: 15px; color: #ffffff; }
-    .t-location { font-family: Arial, sans-serif; font-size: 12px; color: rgba(255,255,255,0.72); }
-    .t-stars { color: #f9a825; font-size: 15px; margin-top: 3px; }
+      .compare-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-family: Arial, sans-serif; font-size: 13px; }
+      .compare-table th { background: #1b5e20; color: #fff; padding: 12px 14px; text-align: center; font-size: 13px; }
+      .compare-table th:first-child { text-align: left; background: #111; }
+      .compare-table td { padding: 11px 14px; border-bottom: 1px solid #e0dbd0; text-align: center; color: #333; }
+      .compare-table td:first-child { text-align: left; font-weight: 600; color: #111; }
+      .compare-table tr:nth-child(even) td { background: #f8f5ef; }
+      .compare-table .yes { color: #2e7d32; font-size: 17px; }
+      .compare-table .no  { color: #c0392b; font-size: 17px; }
+      .compare-table .highlight-col { background: #e8f5e9 !important; }
 
-    .compare-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-family: Arial, sans-serif; font-size: 13px; }
-    .compare-table th { background: #1b5e20; color: #fff; padding: 12px 14px; text-align: center; font-size: 13px; }
-    .compare-table th:first-child { text-align: left; background: #111; }
-    .compare-table td { padding: 11px 14px; border-bottom: 1px solid #e0dbd0; text-align: center; color: #333; }
-    .compare-table td:first-child { text-align: left; font-weight: 600; color: #111; }
-    .compare-table tr:nth-child(even) td { background: #f8f5ef; }
-    .compare-table .yes { color: #2e7d32; font-size: 17px; }
-    .compare-table .no  { color: #c0392b; font-size: 17px; }
-    .compare-table .highlight-col { background: #e8f5e9 !important; }
+      .faq-item { border-bottom: 1px solid #e0dbd0; padding: 18px 0; }
+      .faq-q { font-family: Arial, sans-serif; font-size: 15px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; cursor: pointer; }
+      .faq-q::before { content: 'Q: '; color: #c0392b; }
+      .faq-a { font-family: Arial, sans-serif; font-size: 14px; color: #444; line-height: 1.6; }
 
-    .faq-item { border-bottom: 1px solid #e0dbd0; padding: 18px 0; }
-    .faq-q { font-family: Arial, sans-serif; font-size: 15px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; cursor: pointer; }
-    .faq-q::before { content: 'Q: '; color: #c0392b; }
-    .faq-a { font-family: Arial, sans-serif; font-size: 14px; color: #444; line-height: 1.6; }
+      .info-strip {
+        background: linear-gradient(135deg, #0d3b1e, #1b5e20);
+        border-radius: 14px;
+        padding: 32px 28px;
+        margin: 36px 0 28px;
+        text-align: center;
+        color: #fff;
+      }
+      .info-strip h3 { font-family: 'Georgia', serif; font-size: 22px; margin-bottom: 10px; color: #e8c96d; }
+      .info-strip p { font-family: Arial, sans-serif; font-size: 14px; color: rgba(255,255,255,0.82); margin-bottom: 20px; }
+      .guarantee-note { font-family: Arial, sans-serif; font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 12px !important; }
 
-    .info-strip {
-      background: linear-gradient(135deg, #0d3b1e, #1b5e20);
-      border-radius: 14px;
-      padding: 32px 28px;
-      margin: 36px 0 28px;
-      text-align: center;
-      color: #fff;
-    }
-    .info-strip h3 { font-family: 'Georgia', serif; font-size: 22px; margin-bottom: 10px; color: #e8c96d; }
-    .info-strip p { font-family: Arial, sans-serif; font-size: 14px; color: rgba(255,255,255,0.82); margin-bottom: 20px; }
-    .guarantee-note { font-family: Arial, sans-serif; font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 12px !important; }
+      .disclaimer-strip {
+        background: #f0ede6;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 18px 20px;
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        color: #888;
+        line-height: 1.7;
+        margin-top: 32px;
+      }
+      .disclaimer-strip strong { color: #555; }
 
-    .disclaimer-strip {
-      background: #f0ede6;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 18px 20px;
-      font-family: Arial, sans-serif;
-      font-size: 11px;
-      color: #888;
-      line-height: 1.7;
-      margin-top: 32px;
-    }
-    .disclaimer-strip strong { color: #555; }
+      .btn-wrap { display: flex; justify-content: center; margin: 28px 0; }
+      .btn-red {
+        display: inline-block;
+        background: #c0392b;
+        color: #fff !important;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 800;
+        padding: 16px 44px;
+        border-radius: 50px;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        box-shadow: 0 5px 18px rgba(192,57,43,0.45);
+        transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+        letter-spacing: 0.02em;
+      }
+      .btn-red:hover { background: #a93226; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(192,57,43,0.55); }
+      .btn-red:focus { outline: none; }
+      .btn-green {
+        display: inline-block;
+        background: #1b5e20;
+        color: #fff !important;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 800;
+        padding: 16px 44px;
+        border-radius: 50px;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        box-shadow: 0 5px 18px rgba(27,94,32,0.45);
+        transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+        letter-spacing: 0.02em;
+      }
+      .btn-green:hover { background: #2e7d32; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(27,94,32,0.55); }
+      .btn-green:focus { outline: none; }
+      .btn-yellow {
+        display: inline-block;
+        background: #f9a825;
+        color: #1a1a1a !important;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 800;
+        padding: 16px 44px;
+        border-radius: 50px;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        box-shadow: 0 5px 18px rgba(249,168,37,0.5);
+        transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+        letter-spacing: 0.02em;
+      }
+      .btn-yellow:hover { background: #f57f17; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(249,168,37,0.6); }
+      .btn-yellow:focus { outline: none; }
 
-    .btn-wrap { display: flex; justify-content: center; margin: 28px 0; }
-    .btn-red {
-      display: inline-block;
-      background: #c0392b;
-      color: #fff !important;
-      font-family: Arial, sans-serif;
-      font-size: 15px;
-      font-weight: 800;
-      padding: 16px 44px;
-      border-radius: 50px;
-      text-align: center;
-      text-decoration: none;
-      border: none;
-      outline: none;
-      box-shadow: 0 5px 18px rgba(192,57,43,0.45);
-      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-      letter-spacing: 0.02em;
-    }
-    .btn-red:hover { background: #a93226; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(192,57,43,0.55); }
-    .btn-red:focus { outline: none; }
-    .btn-green {
-      display: inline-block;
-      background: #1b5e20;
-      color: #fff !important;
-      font-family: Arial, sans-serif;
-      font-size: 15px;
-      font-weight: 800;
-      padding: 16px 44px;
-      border-radius: 50px;
-      text-align: center;
-      text-decoration: none;
-      border: none;
-      outline: none;
-      box-shadow: 0 5px 18px rgba(27,94,32,0.45);
-      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-      letter-spacing: 0.02em;
-    }
-    .btn-green:hover { background: #2e7d32; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(27,94,32,0.55); }
-    .btn-green:focus { outline: none; }
-    .btn-yellow {
-      display: inline-block;
-      background: #f9a825;
-      color: #1a1a1a !important;
-      font-family: Arial, sans-serif;
-      font-size: 15px;
-      font-weight: 800;
-      padding: 16px 44px;
-      border-radius: 50px;
-      text-align: center;
-      text-decoration: none;
-      border: none;
-      outline: none;
-      box-shadow: 0 5px 18px rgba(249,168,37,0.5);
-      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-      letter-spacing: 0.02em;
-    }
-    .btn-yellow:hover { background: #f57f17; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(249,168,37,0.6); }
-    .btn-yellow:focus { outline: none; }
+      .sidebar { display: flex; flex-direction: column; gap: 24px; }
 
-    .sidebar { display: flex; flex-direction: column; gap: 24px; }
+      .sidebar-info {
+        background: #1a1a2e;
+        color: #e8c96d;
+        border-radius: 12px;
+        padding: 20px 18px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+      }
+      .sidebar-info h4 {
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 12px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding-bottom: 8px;
+      }
+      .sidebar-stat { display: flex; align-items: center; gap: 8px; margin-bottom: 9px; color: rgba(232,201,109,0.9); font-size: 12px; }
+      .sidebar-stat-icon { font-size: 16px; flex-shrink: 0; }
 
-    .sidebar-info {
-      background: #1a1a2e;
-      color: #e8c96d;
-      border-radius: 12px;
-      padding: 20px 18px;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-    }
-    .sidebar-info h4 {
-      font-size: 14px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 12px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      padding-bottom: 8px;
-    }
-    .sidebar-stat { display: flex; align-items: center; gap: 8px; margin-bottom: 9px; color: rgba(232,201,109,0.9); font-size: 12px; }
-    .sidebar-stat-icon { font-size: 16px; flex-shrink: 0; }
+      .sidebar-fact {
+        background: #eaf4ea;
+        border-left: 4px solid #2e7d32;
+        border-radius: 0 10px 10px 0;
+        padding: 16px 14px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        color: #2c4a2c;
+      }
+      .sidebar-fact h4 { font-size: 13px; font-weight: 700; color: #1b5e20; margin-bottom: 8px; }
 
-    .sidebar-fact {
-      background: #eaf4ea;
-      border-left: 4px solid #2e7d32;
-      border-radius: 0 10px 10px 0;
-      padding: 16px 14px;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      color: #2c4a2c;
-    }
-    .sidebar-fact h4 { font-size: 13px; font-weight: 700; color: #1b5e20; margin-bottom: 8px; }
+      .product-widget {
+        background: #fff;
+        border: 1px solid #e0dbd0;
+        border-radius: 12px;
+        padding: 22px 18px;
+        text-align: center;
+      }
 
-    .product-widget {
-      background: #fff;
-      border: 1px solid #e0dbd0;
-      border-radius: 12px;
-      padding: 22px 18px;
-      text-align: center;
-    }
+      .site-footer {
+        background: #1a1a1a;
+        color: rgba(255,255,255,0.45);
+        text-align: center;
+        padding: 24px 16px;
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        line-height: 1.7;
+      }
+      .site-footer a { color: rgba(255,255,255,0.45); text-decoration: underline; }
 
-    .site-footer {
-      background: #1a1a1a;
-      color: rgba(255,255,255,0.45);
-      text-align: center;
-      padding: 24px 16px;
-      font-family: Arial, sans-serif;
-      font-size: 11px;
-      line-height: 1.7;
-    }
-    .site-footer a { color: rgba(255,255,255,0.45); text-decoration: underline; }
+      .reading-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: #f0ede6;
+        border-radius: 20px;
+        padding: 3px 10px;
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        color: #888;
+      }
+    </style>
+  </Fragment>
 
-    .reading-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: #f0ede6;
-      border-radius: 20px;
-      padding: 3px 10px;
-      font-family: Arial, sans-serif;
-      font-size: 11px;
-      color: #888;
-    }
-  </style>
-</head>
-<body>
+  <div class="progress-bar" id="progressBar"></div>
 
-<div class="progress-bar" id="progressBar"></div>
-
-<div class="top-banner">
-  <strong>HEALTH WATCH DAILY</strong> &nbsp;·&nbsp; Independent Health Journalism Since 2018 &nbsp;·&nbsp; Updated: June 2026
-</div>
-
-<div class="masthead">
-  <div class="masthead-logo">Health<span>Watch</span>Daily</div>
-  <div class="masthead-meta">
-    Monday, June 29, 2026<br>
-    <span style="color:#c0392b; font-weight:700;">WELLNESS &amp; METABOLISM</span>
+  <div class="top-banner">
+    <strong>HEALTH WATCH DAILY</strong> &nbsp;·&nbsp; Independent Health Journalism Since 2018 &nbsp;·&nbsp; Updated: June 2026
   </div>
-  <div class="masthead-nav">
-    <span>Home</span>
-    <span class="active">Wellness</span>
-    <span>Nutrition</span>
-    <span>Sleep Health</span>
-    <span>Reviews</span>
-    <span>About</span>
+
+  <div class="masthead">
+    <div class="masthead-logo">Health<span>Watch</span>Daily</div>
+    <div class="masthead-meta">
+      Monday, June 29, 2026<br>
+      <span style="color:#c0392b; font-weight:700;">WELLNESS &amp; METABOLISM</span>
+    </div>
+    <div class="masthead-nav">
+      <span>Home</span>
+      <span class="active">Wellness</span>
+      <span>Nutrition</span>
+      <span>Sleep Health</span>
+      <span>Reviews</span>
+      <span>About</span>
+    </div>
   </div>
-</div>
 
-<div class="page-wrap">
+  <div class="page-wrap">
 
-  <article class="article-body">
+    <article class="article-body">
 
-    <div class="article-category">⚠️ Metabolism &amp; Sleep Health · Sponsored Editorial</div>
+      <div class="article-category">⚠️ Metabolism &amp; Sleep Health · Sponsored Editorial</div>
 
-    <h1 class="article-title">
-      The Reason You're Exhausted Every Morning AND Gaining Belly Fat Has Nothing to Do With Laziness
-    </h1>
+      <h1 class="article-title">
+        The Reason You're Exhausted Every Morning AND Gaining Belly Fat Has Nothing to Do With Laziness
+      </h1>
 
-    <div class="article-subtitle">
-      A stress hormone called cortisol — combined with a silent inflammatory protein — may be running a vicious cycle inside your body while you sleep. Here's how women over 40 are finally breaking it.
-    </div>
-
-    <div class="article-byline">
-      <span>By <strong>Dr. Patricia Weller</strong>, Contributing Health Editor</span>
-      <span class="byline-dot">·</span>
-      <span>June 29, 2026</span>
-      <span class="byline-dot">·</span>
-      <span class="reading-badge">⏱ 7 min read</span>
-      <div class="byline-share">
-        <button class="share-btn share-fb">Facebook</button>
-        <button class="share-btn share-tw">Twitter</button>
-        <button class="share-btn share-em">Email</button>
+      <div class="article-subtitle">
+        A stress hormone called cortisol — combined with a silent inflammatory protein — may be running a vicious cycle inside your body while you sleep. Here's how women over 40 are finally breaking it.
       </div>
-    </div>
 
-    <div class="img-block">
-      <img src="/images/presell/v3/woman-insomnia-night-phone.webp" alt="Woman awake at 3am unable to sleep">
-      <div class="img-caption">Acordar às 3am sem razão aparente é um dos sinais clássicos de cortisol elevado — e pode estar ligado diretamente ao ganho de gordura abdominal.</div>
-    </div>
-
-    <p class="article-lead">
-      If you wake up tired, battle belly fat that won't budge — and feel like your body is working <em>against</em> you — new metabolic research suggests you may be right. A two-hormone feedback loop triggered by chronic stress and poor sleep may be the reason diet and exercise alone are failing you.
-    </p>
-
-    <p>
-      Millions of women over 40 experience the same baffling pattern: they eat reasonably well, they move their bodies, they try to get to bed at a decent hour — and yet the scale creeps up, the belly stays round, and the fatigue never fully goes away. Doctors often say "it's just aging." But emerging research tells a very different story.
-    </p>
-
-    <p>
-      The real culprit may be a stress hormone called <strong>cortisol</strong> — specifically, <em>chronically elevated cortisol</em> that never fully recovers between cycles. And what makes this particularly insidious is that elevated cortisol directly triggers a second problem: a rise in the inflammatory protein <strong>C-Reactive Protein (CRP)</strong>, which researchers now link to locked fat cells, suppressed metabolism, and yes — poor sleep quality.
-    </p>
-
-    <div class="symptom-box">
-      <h3>🔴 Sound familiar? Check how many of these apply to you:</h3>
-      <div class="symptom-item"><span class="symptom-icon">✗</span><span>You wake up between 2–4am and can't fall back asleep</span></div>
-      <div class="symptom-item"><span class="symptom-icon">✗</span><span>You feel exhausted in the morning even after 7–8 hours in bed</span></div>
-      <div class="symptom-item"><span class="symptom-icon">✗</span><span>Belly fat keeps accumulating despite eating less</span></div>
-      <div class="symptom-item"><span class="symptom-icon">✗</span><span>You crave sugar, salt or carbs — especially at night</span></div>
-      <div class="symptom-item"><span class="symptom-icon">✗</span><span>You feel "wired but tired" — anxious yet exhausted simultaneously</span></div>
-      <div class="symptom-item"><span class="symptom-icon">✗</span><span>Brain fog that makes it hard to think clearly before noon</span></div>
-      <div class="symptom-item"><span class="symptom-icon">✗</span><span>Your weight loss plateaued months ago and nothing breaks it</span></div>
-    </div>
-
-    <p>
-      If you checked <strong>3 or more</strong>, your body may be locked in what researchers call a <strong>Cortisol-Inflammation Loop</strong> — and understanding it could change everything about how you approach your health.
-    </p>
-
-    <div class="btn-wrap">
-      <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" rel="nofollow" class="btn-red">
-        🔍 Discover the Official Solution →
-      </a>
-    </div>
-
-    <h2 class="section-heading">😰 The Cortisol-Inflammation Loop Nobody Talks About</h2>
-
-    <p>
-      Cortisol is not your enemy. It's a survival hormone — it helps you wake up in the morning, respond to stress, and mobilize energy when you need it. <strong>The problem starts when it never fully turns off.</strong>
-    </p>
-
-    <p>
-      Chronic stress, disrupted sleep, processed foods, and even constant low-grade anxiety can keep cortisol elevated for hours and days at a time. And when that happens, your body pays a steep price.
-    </p>
-
-    <div class="loop-box">
-      <h3>🔄 The Cortisol–CRP Fat-Lock Cycle</h3>
-      <div class="loop-step">
-        <div class="loop-num">1</div>
-        <div class="loop-text"><strong>Chronic stress → cortisol stays elevated</strong><br>Work pressure, poor sleep, and anxiety keep cortisol from dropping at night as it should.</div>
-      </div>
-      <div class="loop-arrow">↓</div>
-      <div class="loop-step">
-        <div class="loop-num">2</div>
-        <div class="loop-text"><strong>High cortisol triggers CRP production</strong><br>Your liver releases C-Reactive Protein in response to cortisol-driven inflammation signals — a known metabolic disruptor.</div>
-      </div>
-      <div class="loop-arrow">↓</div>
-      <div class="loop-step">
-        <div class="loop-num">3</div>
-        <div class="loop-text"><strong>CRP "locks" fat cells and slows metabolism</strong><br>Elevated CRP interferes with adiponectin signaling — the hormone that tells fat cells to release stored energy.</div>
-      </div>
-      <div class="loop-arrow">↓</div>
-      <div class="loop-step">
-        <div class="loop-num">4</div>
-        <div class="loop-text"><strong>Belly fat accumulates — sleep gets worse</strong><br>Visceral fat itself produces more inflammatory signals, raising CRP further. And high CRP disrupts sleep architecture — completing the loop.</div>
-      </div>
-      <div class="loop-arrow">↓</div>
-      <div class="loop-step">
-        <div class="loop-num">5</div>
-        <div class="loop-text"><strong>Poor sleep → more cortisol → cycle repeats</strong><br>Just one night of fragmented sleep raises cortisol by up to 37% the following day, according to published sleep research.</div>
-      </div>
-    </div>
-
-    <p>
-      This isn't a willpower problem. It's a <strong>biochemical cycle</strong> that diet and exercise alone cannot fully interrupt — because no amount of salads will reset a cortisol system that's been running in overdrive for years.
-    </p>
-
-    <div class="pull-quote">
-      <p>"Chronically elevated cortisol is perhaps the most underappreciated driver of abdominal fat accumulation in women over 40. The connection to CRP and disrupted sleep architecture creates a self-reinforcing cycle that conventional weight loss advice simply doesn't address."</p>
-      <cite>— Metabolic Research Review, Journal of Clinical Endocrinology &amp; Metabolism (2024)</cite>
-    </div>
-
-    <div class="img-block">
-      <img src="/images/presell/v3/infographic-cortisol-crp-cycle.webp" alt="Cortisol-CRP cycle diagram">
-      <div class="img-caption">Ilustração do ciclo Cortisol–CRP e seus efeitos sobre o metabolismo, sono e acúmulo de gordura visceral.</div>
-    </div>
-
-    <h2 class="section-heading">🏝️ What Okinawa Reveals About Breaking This Cycle</h2>
-
-    <p>
-      Okinawa, Japan is consistently among the world's top "Blue Zones" — regions where people regularly live past 90 in robust health, with remarkably low rates of obesity, metabolic disease, and chronic fatigue.
-    </p>
-
-    <p>
-      What makes this extraordinary is that Okinawan elders are <em>not</em> doing extreme diets or intense workout programs. Researchers who studied their lifestyle found something far simpler — and far more powerful: <strong>a daily ritual of specific polyphenol-rich plants and fermented compounds</strong> consumed every morning.
-    </p>
-
-    <p>
-      These plants — many of them unknown in Western nutrition — appear to directly target the two root problems: they help <strong>modulate cortisol response</strong> and <strong>reduce chronic CRP levels</strong>, effectively helping to break the fat-lock cycle from both ends simultaneously.
-    </p>
-
-    <div class="science-strip">
-      <strong>📋 What the research shows:</strong>
-      A 2024 meta-analysis found that polyphenol-rich supplementation reduced hs-CRP levels by an average of 28% over 8 weeks in individuals with metabolic syndrome — and separately, compounds like EGCG (green tea) have been shown to modulate HPA axis cortisol response in peer-reviewed human trials.
-    </div>
-
-    <h2 class="section-heading">🫙 The Formula Inspired by This Research</h2>
-
-    <p>
-      Okinawa Flat Belly Tonic is a once-daily powdered drink that combines the key polyphenol compounds, adaptogens, and probiotic cultures found in traditional Okinawan longevity diets — formulated specifically to address the CRP-cortisol-metabolism connection.
-    </p>
-
-    <p>
-      You simply mix one scoop into water each morning. No harsh stimulants. No restrictive diet required. The formula is designed to work <em>with</em> your body's natural rhythms rather than forcing it.
-    </p>
-
-    <div class="img-block">
-      <img src="/images/presell/v3/product-lifestyle-glass-tonic.webp" alt="Okinawa Flat Belly Tonic morning ritual">
-      <div class="img-caption">O ritual matinal de Okinawa: uma colher por dia, dissolvida em água — sem estimulantes, sem restrições drásticas.</div>
-    </div>
-
-    <h3 class="section-subheading">Key Ingredients &amp; What They Do</h3>
-
-    <div class="ingredients-grid">
-      <div class="ingredient-card">
-        <div class="ingredient-icon">🍵</div>
-        <div class="ingredient-name">EGCG — Green Tea Extract</div>
-        <div class="ingredient-desc">Clinically studied for its ability to modulate the HPA axis (cortisol response) and support fat oxidation, particularly visceral belly fat.</div>
-      </div>
-      <div class="ingredient-card">
-        <div class="ingredient-icon">🫚</div>
-        <div class="ingredient-name">Piperine (Black Pepper)</div>
-        <div class="ingredient-desc">Enhances bioavailability of other compounds by up to 2,000% — and has demonstrated anti-inflammatory activity linked to CRP reduction.</div>
-      </div>
-      <div class="ingredient-card">
-        <div class="ingredient-icon">🫚</div>
-        <div class="ingredient-name">Ginger Root</div>
-        <div class="ingredient-desc">A powerful adaptogen with documented effects on reducing inflammatory markers including IL-6 and CRP in clinical settings.</div>
-      </div>
-      <div class="ingredient-card">
-        <div class="ingredient-icon">🍒</div>
-        <div class="ingredient-name">Tart Cherry &amp; Mulberry</div>
-        <div class="ingredient-desc">Rich in anthocyanins that help modulate cortisol patterns and support deeper, more restorative sleep cycles — directly addressing the loop.</div>
-      </div>
-      <div class="ingredient-card">
-        <div class="ingredient-icon">🥕</div>
-        <div class="ingredient-name">Carrot &amp; Papaya Polyphenols</div>
-        <div class="ingredient-desc">Provide beta-carotene and unique enzymatic compounds that support digestive health and reduce systemic oxidative stress.</div>
-      </div>
-      <div class="ingredient-card">
-        <div class="ingredient-icon">🦠</div>
-        <div class="ingredient-name">Probiotic Complex (Inulin + B. Infantis)</div>
-        <div class="ingredient-desc">The gut-cortisol axis is real — a healthy microbiome helps regulate stress hormones and reduce inflammatory signals from the gut.</div>
-      </div>
-    </div>
-
-    <div class="btn-wrap">
-      <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" rel="nofollow" class="btn-green">
-        ✅ Check Official Availability &amp; Pricing →
-      </a>
-    </div>
-
-    <h2 class="section-heading">💬 What Readers Are Reporting</h2>
-
-    <div class="testimonial-card">
-      <p class="testimonial-text">"I didn't expect the first thing to change to be my sleep. Within two weeks I was sleeping through the night for the first time in years. Then around week five I noticed my pants were getting looser. I hadn't changed anything else. I'm a believer."</p>
-      <div class="t-author">
-        <div class="t-avatar">👩</div>
-        <div>
-          <div class="t-name">Linda K.</div>
-          <div class="t-location">Columbus, Ohio · Verified Reader</div>
-          <div class="t-stars">★★★★★</div>
+      <div class="article-byline">
+        <span>By <strong>Dr. Patricia Weller</strong>, Contributing Health Editor</span>
+        <span class="byline-dot">·</span>
+        <span>June 29, 2026</span>
+        <span class="byline-dot">·</span>
+        <span class="reading-badge">⏱ 7 min read</span>
+        <div class="byline-share">
+          <button class="share-btn share-fb">Facebook</button>
+          <button class="share-btn share-tw">Twitter</button>
+          <button class="share-btn share-em">Email</button>
         </div>
       </div>
-    </div>
 
-    <div class="testimonial-card">
-      <p class="testimonial-text">"My doctor told me my CRP was elevated and mentioned it could be causing my fatigue and weight issues. I started researching and found this tonic. Three months in — CRP is back in normal range, I've lost 14 lbs, and I wake up actually rested. I'll never go back."</p>
-      <div class="t-author">
-        <div class="t-avatar">👩‍🦳</div>
-        <div>
-          <div class="t-name">Margot D.</div>
-          <div class="t-location">Portland, Oregon · Verified Reader</div>
-          <div class="t-stars">★★★★★</div>
-        </div>
+      <div class="img-block">
+        <img src="/images/presell/v3/woman-insomnia-night-phone.webp" alt="Woman awake at 3am unable to sleep">
+        <div class="img-caption">Acordar às 3am sem razão aparente é um dos sinais clássicos de cortisol elevado — e pode estar ligado diretamente ao ganho de gordura abdominal.</div>
       </div>
-    </div>
 
-    <div class="testimonial-card">
-      <p class="testimonial-text">"The 'wired but tired' feeling was ruling my life. I was stressed, not sleeping, gaining weight and couldn't figure out why clean eating wasn't working. This tonic broke the cycle. The difference in the first month alone was dramatic enough that my husband started asking what I was doing differently."</p>
-      <div class="t-author">
-        <div class="t-avatar">🧕</div>
-        <div>
-          <div class="t-name">Teresa W.</div>
-          <div class="t-location">Nashville, Tennessee · Verified Reader</div>
-          <div class="t-stars">★★★★★</div>
-        </div>
+      <p class="article-lead">
+        If you wake up tired, battle belly fat that won't budge — and feel like your body is working <em>against</em> you — new metabolic research suggests you may be right. A two-hormone feedback loop triggered by chronic stress and poor sleep may be the reason diet and exercise alone are failing you.
+      </p>
+
+      <p>
+        Millions of women over 40 experience the same baffling pattern: they eat reasonably well, they move their bodies, they try to get to bed at a decent hour — and yet the scale creeps up, the belly stays round, and the fatigue never fully goes away. Doctors often say "it's just aging." But emerging research tells a very different story.
+      </p>
+
+      <p>
+        The real culprit may be a stress hormone called <strong>cortisol</strong> — specifically, <em>chronically elevated cortisol</em> that never fully recovers between cycles. And what makes this particularly insidious is that elevated cortisol directly triggers a second problem: a rise in the inflammatory protein <strong>C-Reactive Protein (CRP)</strong>, which researchers now link to locked fat cells, suppressed metabolism, and yes — poor sleep quality.
+      </p>
+
+      <div class="symptom-box">
+        <h3>🔴 Sound familiar? Check how many of these apply to you:</h3>
+        <div class="symptom-item"><span class="symptom-icon">✗</span><span>You wake up between 2–4am and can't fall back asleep</span></div>
+        <div class="symptom-item"><span class="symptom-icon">✗</span><span>You feel exhausted in the morning even after 7–8 hours in bed</span></div>
+        <div class="symptom-item"><span class="symptom-icon">✗</span><span>Belly fat keeps accumulating despite eating less</span></div>
+        <div class="symptom-item"><span class="symptom-icon">✗</span><span>You crave sugar, salt or carbs — especially at night</span></div>
+        <div class="symptom-item"><span class="symptom-icon">✗</span><span>You feel "wired but tired" — anxious yet exhausted simultaneously</span></div>
+        <div class="symptom-item"><span class="symptom-icon">✗</span><span>Brain fog that makes it hard to think clearly before noon</span></div>
+        <div class="symptom-item"><span class="symptom-icon">✗</span><span>Your weight loss plateaued months ago and nothing breaks it</span></div>
       </div>
-    </div>
 
-    <h2 class="section-heading">⚖️ How It Compares</h2>
+      <p>
+        If you checked <strong>3 or more</strong>, your body may be locked in what researchers call a <strong>Cortisol-Inflammation Loop</strong> — and understanding it could change everything about how you approach your health.
+      </p>
 
-    <table class="compare-table">
-      <thead>
-        <tr>
-          <th>Feature</th>
-          <th style="background:#c0392b;">Okinawa Flat Belly Tonic</th>
-          <th>Generic Weight Loss Pills</th>
-          <th>Diet Alone</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Targets CRP inflammation</td>
-          <td class="highlight-col"><span class="yes">✔</span></td>
-          <td><span class="no">✘</span></td>
-          <td><span class="no">✘</span></td>
-        </tr>
-        <tr>
-          <td>Supports cortisol modulation</td>
-          <td class="highlight-col"><span class="yes">✔</span></td>
-          <td><span class="no">✘</span></td>
-          <td><span class="no">✘</span></td>
-        </tr>
-        <tr>
-          <td>Improves sleep quality</td>
-          <td class="highlight-col"><span class="yes">✔</span></td>
-          <td><span class="no">✘</span></td>
-          <td><span class="no">✘</span></td>
-        </tr>
-        <tr>
-          <td>Stimulant-free formula</td>
-          <td class="highlight-col"><span class="yes">✔</span></td>
-          <td><span class="no">✘</span></td>
-          <td><span class="yes">✔</span></td>
-        </tr>
-        <tr>
-          <td>Probiotic gut support</td>
-          <td class="highlight-col"><span class="yes">✔</span></td>
-          <td><span class="no">✘</span></td>
-          <td><span class="no">✘</span></td>
-        </tr>
-        <tr>
-          <td>90-day money-back guarantee</td>
-          <td class="highlight-col"><span class="yes">✔</span></td>
-          <td><span class="no">✘</span></td>
-          <td>—</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="img-block">
-      <img src="/images/presell/v3/product-bottle-guarantee-seal.webp" alt="Okinawa Flat Belly Tonic guarantee seal">
-      <div class="img-caption">Okinawa Flat Belly Tonic é vendido exclusivamente pelo site oficial com garantia de reembolso de 90 dias — sem perguntas.</div>
-    </div>
-
-    <h2 class="section-heading">❓ Frequently Asked Questions</h2>
-
-    <div class="faq-item">
-      <div class="faq-q">How long before I see results?</div>
-      <div class="faq-a">Most users report noticeable changes in energy and sleep quality within 2–4 weeks. Visible changes in belly fat typically appear between weeks 4–8. The official recommendation is to use it for at least 90 days for full results — which is why the guarantee covers that full period.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Do I need to follow a specific diet?</div>
-      <div class="faq-a">No strict diet is required. The formula is designed to work even without major lifestyle changes. That said, reducing ultra-processed foods and added sugars will complement results significantly, as both drive CRP and cortisol elevations.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Is it safe for people over 50?</div>
-      <div class="faq-a">The formula uses natural botanical ingredients without stimulants, making it generally well-tolerated by older adults. If you're on medication — particularly blood thinners or diabetes medication — consult your physician before starting any new supplement.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What if it doesn't work for me?</div>
-      <div class="faq-a">The official website offers a 90-day money-back guarantee. If you don't see results within 3 months, you can request a full refund — no questions asked. This makes it a genuinely low-risk option to try.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Where can I buy it?</div>
-      <div class="faq-a">Okinawa Flat Belly Tonic is sold exclusively through the official website to ensure product authenticity and access to the guarantee. It is not available on Amazon or in retail stores.</div>
-    </div>
-
-    <div class="info-strip">
-      <h3>🌅 Ready to Break the Cycle?</h3>
-      <p>Thousands of women have already used this Okinawan morning ritual to reclaim their energy, their sleep — and their body. The official website has full ingredient details, current pricing, and bundle discounts available today.</p>
-      <div class="btn-wrap" style="margin: 0;">
-        <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" rel="nofollow" class="btn-yellow">
-          🛒 Visit Official Website — Check Availability →
+      <div class="btn-wrap">
+        <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" rel="nofollow" class="btn-red">
+          🔍 Discover the Official Solution →
         </a>
       </div>
-      <p class="guarantee-note">🔒 90-Day Money-Back Guarantee &nbsp;·&nbsp; Secure Checkout &nbsp;·&nbsp; Official Site Only</p>
-    </div>
 
-    <div class="disclaimer-strip">
-      <strong>Editorial Disclosure &amp; Disclaimer:</strong> This article is sponsored editorial content and contains affiliate links. HealthWatchDaily may receive compensation if you click through and make a purchase. This does not influence our editorial standards. The information presented is for educational purposes only and does not constitute medical advice. Individual results vary. These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Always consult a qualified healthcare provider before starting any supplement, especially if you are pregnant, nursing, or taking prescription medications. References to scientific studies are provided for context and do not imply that the product has been clinically proven to produce the same outcomes.
-    </div>
+      <h2 class="section-heading">😰 The Cortisol-Inflammation Loop Nobody Talks About</h2>
 
-  </article>
-
-  <!-- ════════════ SIDEBAR ════════════ -->
-  <aside class="sidebar">
-
-    <!-- STATS BOX -->
-    <div class="sidebar-info">
-      <h4>📊 Quick Facts</h4>
-      <div class="sidebar-stat"><span class="sidebar-stat-icon">🌡️</span><span>CRP above 3.0 mg/L is considered high-risk for metabolic disease</span></div>
-      <div class="sidebar-stat"><span class="sidebar-stat-icon">😴</span><span>Just 1 poor night's sleep raises cortisol by up to 37% the next day</span></div>
-      <div class="sidebar-stat"><span class="sidebar-stat-icon">📈</span><span>Women over 40 see CRP levels rise on average 8% per decade</span></div>
-      <div class="sidebar-stat"><span class="sidebar-stat-icon">🏝️</span><span>Okinawa has 3× more centenarians per capita than the US average</span></div>
-      <div class="sidebar-stat"><span class="sidebar-stat-icon">🧪</span><span>EGCG shown to reduce visceral fat in 12-week human trials</span></div>
-    </div>
-
-    <!-- FACT BOX -->
-    <div class="sidebar-fact">
-      <h4>🔬 Did You Know?</h4>
-      <p style="font-size:12px; line-height:1.6; color:#2c4a2c;">
-        Visceral belly fat — the deep fat around your organs — is itself an inflammatory organ. It secretes cytokines that raise CRP levels, worsening the very inflammation driving its growth. This is why targeting CRP at the source is more effective than calorie restriction alone.
+      <p>
+        Cortisol is not your enemy. It's a survival hormone — it helps you wake up in the morning, respond to stress, and mobilize energy when you need it. <strong>The problem starts when it never fully turns off.</strong>
       </p>
-    </div>
 
-    <!-- SECOND WIDGET CTA -->
-    <div class="product-widget" style="background: linear-gradient(135deg, #0d3b1e, #1b5e20); color:#fff; border-color: #2e7d32;">
-      <div style="font-size:36px; margin-bottom:10px;">🌅</div>
-      <h3 style="color:#e8c96d; font-size:16px; margin-bottom:8px;">Limited Supply Warning</h3>
-      <p style="font-family:Arial,sans-serif; font-size:12px; color:rgba(255,255,255,0.8); margin-bottom:16px; line-height:1.6;">
-        Due to high demand, the 3-bottle and 6-bottle bundle discounts are frequently sold out. Check current availability on the official website.
+      <p>
+        Chronic stress, disrupted sleep, processed foods, and even constant low-grade anxiety can keep cortisol elevated for hours and days at a time. And when that happens, your body pays a steep price.
       </p>
-      <div class="btn-wrap" style="margin:0;">
-        <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" rel="nofollow" class="btn-yellow" style="font-size:13px; padding:12px 20px;">
-          Check Availability →
+
+      <div class="loop-box">
+        <h3>🔄 The Cortisol–CRP Fat-Lock Cycle</h3>
+        <div class="loop-step">
+          <div class="loop-num">1</div>
+          <div class="loop-text"><strong>Chronic stress → cortisol stays elevated</strong><br>Work pressure, poor sleep, and anxiety keep cortisol from dropping at night as it should.</div>
+        </div>
+        <div class="loop-arrow">↓</div>
+        <div class="loop-step">
+          <div class="loop-num">2</div>
+          <div class="loop-text"><strong>High cortisol triggers CRP production</strong><br>Your liver releases C-Reactive Protein in response to cortisol-driven inflammation signals — a known metabolic disruptor.</div>
+        </div>
+        <div class="loop-arrow">↓</div>
+        <div class="loop-step">
+          <div class="loop-num">3</div>
+          <div class="loop-text"><strong>CRP "locks" fat cells and slows metabolism</strong><br>Elevated CRP interferes with adiponectin signaling — the hormone that tells fat cells to release stored energy.</div>
+        </div>
+        <div class="loop-arrow">↓</div>
+        <div class="loop-step">
+          <div class="loop-num">4</div>
+          <div class="loop-text"><strong>Belly fat accumulates — sleep gets worse</strong><br>Visceral fat itself produces more inflammatory signals, raising CRP further. And high CRP disrupts sleep architecture — completing the loop.</div>
+        </div>
+        <div class="loop-arrow">↓</div>
+        <div class="loop-step">
+          <div class="loop-num">5</div>
+          <div class="loop-text"><strong>Poor sleep → more cortisol → cycle repeats</strong><br>Just one night of fragmented sleep raises cortisol by up to 37% the following day, according to published sleep research.</div>
+        </div>
+      </div>
+
+      <p>
+        This isn't a willpower problem. It's a <strong>biochemical cycle</strong> that diet and exercise alone cannot fully interrupt — because no amount of salads will reset a cortisol system that's been running in overdrive for years.
+      </p>
+
+      <div class="pull-quote">
+        <p>"Chronically elevated cortisol is perhaps the most underappreciated driver of abdominal fat accumulation in women over 40. The connection to CRP and disrupted sleep architecture creates a self-reinforcing cycle that conventional weight loss advice simply doesn't address."</p>
+        <cite>— Metabolic Research Review, Journal of Clinical Endocrinology &amp; Metabolism (2024)</cite>
+      </div>
+
+      <div class="img-block">
+        <img src="/images/presell/v3/infographic-cortisol-crp-cycle.webp" alt="Cortisol-CRP cycle diagram">
+        <div class="img-caption">Ilustração do ciclo Cortisol–CRP e seus efeitos sobre o metabolismo, sono e acúmulo de gordura visceral.</div>
+      </div>
+
+      <h2 class="section-heading">🏝️ What Okinawa Reveals About Breaking This Cycle</h2>
+
+      <p>
+        Okinawa, Japan is consistently among the world's top "Blue Zones" — regions where people regularly live past 90 in robust health, with remarkably low rates of obesity, metabolic disease, and chronic fatigue.
+      </p>
+
+      <p>
+        What makes this extraordinary is that Okinawan elders are <em>not</em> doing extreme diets or intense workout programs. Researchers who studied their lifestyle found something far simpler — and far more powerful: <strong>a daily ritual of specific polyphenol-rich plants and fermented compounds</strong> consumed every morning.
+      </p>
+
+      <p>
+        These plants — many of them unknown in Western nutrition — appear to directly target the two root problems: they help <strong>modulate cortisol response</strong> and <strong>reduce chronic CRP levels</strong>, effectively helping to break the fat-lock cycle from both ends simultaneously.
+      </p>
+
+      <div class="science-strip">
+        <strong>📋 What the research shows:</strong>
+        A 2024 meta-analysis found that polyphenol-rich supplementation reduced hs-CRP levels by an average of 28% over 8 weeks in individuals with metabolic syndrome — and separately, compounds like EGCG (green tea) have been shown to modulate HPA axis cortisol response in peer-reviewed human trials.
+      </div>
+
+      <h2 class="section-heading">🫙 The Formula Inspired by This Research</h2>
+
+      <p>
+        Okinawa Flat Belly Tonic is a once-daily powdered drink that combines the key polyphenol compounds, adaptogens, and probiotic cultures found in traditional Okinawan longevity diets — formulated specifically to address the CRP-cortisol-metabolism connection.
+      </p>
+
+      <p>
+        You simply mix one scoop into water each morning. No harsh stimulants. No restrictive diet required. The formula is designed to work <em>with</em> your body's natural rhythms rather than forcing it.
+      </p>
+
+      <div class="img-block">
+        <img src="/images/presell/v3/product-lifestyle-glass-tonic.webp" alt="Okinawa Flat Belly Tonic morning ritual">
+        <div class="img-caption">O ritual matinal de Okinawa: uma colher por dia, dissolvida em água — sem estimulantes, sem restrições drásticas.</div>
+      </div>
+
+      <h3 class="section-subheading">Key Ingredients &amp; What They Do</h3>
+
+      <div class="ingredients-grid">
+        <div class="ingredient-card">
+          <div class="ingredient-icon">🍵</div>
+          <div class="ingredient-name">EGCG — Green Tea Extract</div>
+          <div class="ingredient-desc">Clinically studied for its ability to modulate the HPA axis (cortisol response) and support fat oxidation, particularly visceral belly fat.</div>
+        </div>
+        <div class="ingredient-card">
+          <div class="ingredient-icon">🫚</div>
+          <div class="ingredient-name">Piperine (Black Pepper)</div>
+          <div class="ingredient-desc">Enhances bioavailability of other compounds by up to 2,000% — and has demonstrated anti-inflammatory activity linked to CRP reduction.</div>
+        </div>
+        <div class="ingredient-card">
+          <div class="ingredient-icon">🫚</div>
+          <div class="ingredient-name">Ginger Root</div>
+          <div class="ingredient-desc">A powerful adaptogen with documented effects on reducing inflammatory markers including IL-6 and CRP in clinical settings.</div>
+        </div>
+        <div class="ingredient-card">
+          <div class="ingredient-icon">🍒</div>
+          <div class="ingredient-name">Tart Cherry &amp; Mulberry</div>
+          <div class="ingredient-desc">Rich in anthocyanins that help modulate cortisol patterns and support deeper, more restorative sleep cycles — directly addressing the loop.</div>
+        </div>
+        <div class="ingredient-card">
+          <div class="ingredient-icon">🥕</div>
+          <div class="ingredient-name">Carrot &amp; Papaya Polyphenols</div>
+          <div class="ingredient-desc">Provide beta-carotene and unique enzymatic compounds that support digestive health and reduce systemic oxidative stress.</div>
+        </div>
+        <div class="ingredient-card">
+          <div class="ingredient-icon">🦠</div>
+          <div class="ingredient-name">Probiotic Complex (Inulin + B. Infantis)</div>
+          <div class="ingredient-desc">The gut-cortisol axis is real — a healthy microbiome helps regulate stress hormones and reduce inflammatory signals from the gut.</div>
+        </div>
+      </div>
+
+      <div class="btn-wrap">
+        <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" rel="nofollow" class="btn-green">
+          ✅ Check Official Availability &amp; Pricing →
         </a>
       </div>
-    </div>
 
-  </aside>
-</div>
+      <h2 class="section-heading">💬 What Readers Are Reporting</h2>
 
-<div class="site-footer">
-  <p>© 2026 HealthWatchDaily.com · <a href="/privacy-policy">Privacy Policy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/affiliate-disclosure">Affiliate Disclosure</a> · <a href="/contact">Contact</a></p>
-  <p style="margin-top:6px;">This site is for informational and educational purposes only.</p>
-</div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"I didn't expect the first thing to change to be my sleep. Within two weeks I was sleeping through the night for the first time in years. Then around week five I noticed my pants were getting looser. I hadn't changed anything else. I'm a believer."</p>
+        <div class="t-author">
+          <div class="t-avatar">👩</div>
+          <div>
+            <div class="t-name">Linda K.</div>
+            <div class="t-location">Columbus, Ohio · Verified Reader</div>
+            <div class="t-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
 
-<script>
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docH = document.documentElement.scrollHeight - window.innerHeight;
-    const pct = (scrollTop / docH) * 100;
-    document.getElementById('progressBar').style.width = pct + '%';
-  });
-</script>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"My doctor told me my CRP was elevated and mentioned it could be causing my fatigue and weight issues. I started researching and found this tonic. Three months in — CRP is back in normal range, I've lost 14 lbs, and I wake up actually rested. I'll never go back."</p>
+        <div class="t-author">
+          <div class="t-avatar">👩‍🦳</div>
+          <div>
+            <div class="t-name">Margot D.</div>
+            <div class="t-location">Portland, Oregon · Verified Reader</div>
+            <div class="t-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
 
-</body>
-</html>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"The 'wired but tired' feeling was ruling my life. I was stressed, not sleeping, gaining weight and couldn't figure out why clean eating wasn't working. This tonic broke the cycle. The difference in the first month alone was dramatic enough that my husband started asking what I was doing differently."</p>
+        <div class="t-author">
+          <div class="t-avatar">🧕</div>
+          <div>
+            <div class="t-name">Teresa W.</div>
+            <div class="t-location">Nashville, Tennessee · Verified Reader</div>
+            <div class="t-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-heading">⚖️ How It Compares</h2>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th style="background:#c0392b;">Okinawa Flat Belly Tonic</th>
+            <th>Generic Weight Loss Pills</th>
+            <th>Diet Alone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Targets CRP inflammation</td>
+            <td class="highlight-col"><span class="yes">✔</span></td>
+            <td><span class="no">✘</span></td>
+            <td><span class="no">✘</span></td>
+          </tr>
+          <tr>
+            <td>Supports cortisol modulation</td>
+            <td class="highlight-col"><span class="yes">✔</span></td>
+            <td><span class="no">✘</span></td>
+            <td><span class="no">✘</span></td>
+          </tr>
+          <tr>
+            <td>Improves sleep quality</td>
+            <td class="highlight-col"><span class="yes">✔</span></td>
+            <td><span class="no">✘</span></td>
+            <td><span class="no">✘</span></td>
+          </tr>
+          <tr>
+            <td>Stimulant-free formula</td>
+            <td class="highlight-col"><span class="yes">✔</span></td>
+            <td><span class="no">✘</span></td>
+            <td><span class="yes">✔</span></td>
+          </tr>
+          <tr>
+            <td>Probiotic gut support</td>
+            <td class="highlight-col"><span class="yes">✔</span></td>
+            <td><span class="no">✘</span></td>
+            <td><span class="no">✘</span></td>
+          </tr>
+          <tr>
+            <td>90-day money-back guarantee</td>
+            <td class="highlight-col"><span class="yes">✔</span></td>
+            <td><span class="no">✘</span></td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="img-block">
+        <img src="/images/presell/v3/product-bottle-guarantee-seal.webp" alt="Okinawa Flat Belly Tonic guarantee seal">
+        <div class="img-caption">Okinawa Flat Belly Tonic é vendido exclusivamente pelo site oficial com garantia de reembolso de 90 dias — sem perguntas.</div>
+      </div>
+
+      <h2 class="section-heading">❓ Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">How long before I see results?</div>
+        <div class="faq-a">Most users report noticeable changes in energy and sleep quality within 2–4 weeks. Visible changes in belly fat typically appear between weeks 4–8. The official recommendation is to use it for at least 90 days for full results — which is why the guarantee covers that full period.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I need to follow a specific diet?</div>
+        <div class="faq-a">No strict diet is required. The formula is designed to work even without major lifestyle changes. That said, reducing ultra-processed foods and added sugars will complement results significantly, as both drive CRP and cortisol elevations.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is it safe for people over 50?</div>
+        <div class="faq-a">The formula uses natural botanical ingredients without stimulants, making it generally well-tolerated by older adults. If you're on medication — particularly blood thinners or diabetes medication — consult your physician before starting any new supplement.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if it doesn't work for me?</div>
+        <div class="faq-a">The official website offers a 90-day money-back guarantee. If you don't see results within 3 months, you can request a full refund — no questions asked. This makes it a genuinely low-risk option to try.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Where can I buy it?</div>
+        <div class="faq-a">Okinawa Flat Belly Tonic is sold exclusively through the official website to ensure product authenticity and access to the guarantee. It is not available on Amazon or in retail stores.</div>
+      </div>
+
+      <div class="info-strip">
+        <h3>🌅 Ready to Break the Cycle?</h3>
+        <p>Thousands of women have already used this Okinawan morning ritual to reclaim their energy, their sleep — and their body. The official website has full ingredient details, current pricing, and bundle discounts available today.</p>
+        <div class="btn-wrap" style="margin: 0;">
+          <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" rel="nofollow" class="btn-yellow">
+            🛒 Visit Official Website — Check Availability →
+          </a>
+        </div>
+        <p class="guarantee-note">🔒 90-Day Money-Back Guarantee &nbsp;·&nbsp; Secure Checkout &nbsp;·&nbsp; Official Site Only</p>
+      </div>
+
+      <div class="disclaimer-strip">
+        <strong>Editorial Disclosure &amp; Disclaimer:</strong> This article is sponsored editorial content and contains affiliate links. HealthWatchDaily may receive compensation if you click through and make a purchase. This does not influence our editorial standards. The information presented is for educational purposes only and does not constitute medical advice. Individual results vary. These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Always consult a qualified healthcare provider before starting any supplement, especially if you are pregnant, nursing, or taking prescription medications. References to scientific studies are provided for context and do not imply that the product has been clinically proven to produce the same outcomes.
+      </div>
+
+    </article>
+
+    <!-- ════════════ SIDEBAR ════════════ -->
+    <aside class="sidebar">
+
+      <div class="sidebar-info">
+        <h4>📊 Quick Facts</h4>
+        <div class="sidebar-stat"><span class="sidebar-stat-icon">🌡️</span><span>CRP above 3.0 mg/L is considered high-risk for metabolic disease</span></div>
+        <div class="sidebar-stat"><span class="sidebar-stat-icon">😴</span><span>Just 1 poor night's sleep raises cortisol by up to 37% the next day</span></div>
+        <div class="sidebar-stat"><span class="sidebar-stat-icon">📈</span><span>Women over 40 see CRP levels rise on average 8% per decade</span></div>
+        <div class="sidebar-stat"><span class="sidebar-stat-icon">🏝️</span><span>Okinawa has 3× more centenarians per capita than the US average</span></div>
+        <div class="sidebar-stat"><span class="sidebar-stat-icon">🧪</span><span>EGCG shown to reduce visceral fat in 12-week human trials</span></div>
+      </div>
+
+      <div class="sidebar-fact">
+        <h4>🔬 Did You Know?</h4>
+        <p style="font-size:12px; line-height:1.6; color:#2c4a2c;">
+          Visceral belly fat — the deep fat around your organs — is itself an inflammatory organ. It secretes cytokines that raise CRP levels, worsening the very inflammation driving its growth. This is why targeting CRP at the source is more effective than calorie restriction alone.
+        </p>
+      </div>
+
+      <div class="product-widget" style="background: linear-gradient(135deg, #0d3b1e, #1b5e20); color:#fff; border-color: #2e7d32;">
+        <div style="font-size:36px; margin-bottom:10px;">🌅</div>
+        <h3 style="color:#e8c96d; font-size:16px; margin-bottom:8px;">Limited Supply Warning</h3>
+        <p style="font-family:Arial,sans-serif; font-size:12px; color:rgba(255,255,255,0.8); margin-bottom:16px; line-height:1.6;">
+          Due to high demand, the 3-bottle and 6-bottle bundle discounts are frequently sold out. Check current availability on the official website.
+        </p>
+        <div class="btn-wrap" style="margin:0;">
+          <a href="https://c2d6ddnxbtgz2r61fh0em90ofn.hop.clickbank.net" target="_blank" rel="nofollow" class="btn-yellow" style="font-size:13px; padding:12px 20px;">
+            Check Availability →
+          </a>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 HealthWatchDaily.com · <a href="/privacy-policy">Privacy Policy</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/affiliate-disclosure">Affiliate Disclosure</a> · <a href="/contact">Contact</a></p>
+    <p style="margin-top:6px;">This site is for informational and educational purposes only.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = (scrollTop / docH) * 100;
+      const bar = document.getElementById('progressBar');
+      if (bar) bar.style.width = pct + '%';
+    });
+  </script>
+
+</Layout>
