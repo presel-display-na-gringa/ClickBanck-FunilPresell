@@ -33,27 +33,23 @@ const { title = "WellnessDailyReport" } = Astro.props;
       src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
   </noscript>
 
-  <!-- ============================================================
-       ② GOOGLE ANALYTICS GA4
-  ============================================================ -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-YP7930G972');
-  </script>
+  <!-- ② GOOGLE ANALYTICS GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YP7930G972"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YP7930G972');
+</script>
 
-  <!-- ============================================================
-       ③ TAG GLOBAL DO GOOGLE ADS
-  ============================================================ -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-18062534244');
-  </script>
+<!-- ③ TAG GLOBAL DO GOOGLE ADS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18062534244"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18062534244');
+</script>
 
   <!-- ============================================================
        ④ GOOGLE TAG MANAGER (GTM)
