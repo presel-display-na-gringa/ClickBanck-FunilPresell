@@ -1,41 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-  <!-- ============================================================
-       ① META PIXEL (FACEBOOK)
-       Substitua YOUR_PIXEL_ID pelo seu ID real do Meta Pixel
-  ============================================================ -->
-  <script>
-    !function(f,b,e,v,n,t,s){
-      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window,document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'YOUR_PIXEL_ID');
-    fbq('track', 'PageView');
-  <<script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YP7930G972');
-  gtag('config', 'AW-18062534244');
-</script>
-  <style>
-    /* ===================== RESET & BASE ===================== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Georgia, 'Times New Roman', serif;
-      background: #f5f5f0;
-      color: #2c2c2c;
-      font-size: 17px;
-      line-height: 1.75;
-    }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; height: auto; display: block; border-radius: 6px; }
-
+const title = "A Consumer Guide to Reviewing Daily Wellness Products Before You Buy";
+const description = "Learn what to review before choosing a daily wellness product — ingredients, directions, safety information, and purchasing tips.";
+const ctaTopo = "https://seu-link-de-afiliado.com";
+const ctaMeio = "https://seu-link-de-afiliado.com";
+const ctaFinal = "https://seu-link-de-afiliado.com";
 const currentYear = new Date().getFullYear();
 ---
 
@@ -44,6 +14,34 @@ const currentYear = new Date().getFullYear();
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#163226" />
+
+    <!-- ============================================================
+         ① META PIXEL (FACEBOOK)
+         Substitua YOUR_PIXEL_ID pelo seu ID real do Meta Pixel
+    ============================================================ -->
+    <script is:inline>
+      !function(f,b,e,v,n,t,s){
+        if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'YOUR_PIXEL_ID');
+      fbq('track', 'PageView');
+    </script>
+
+    <!-- ============================================================
+         ② GOOGLE TAG (GA4 + Google Ads)
+    ============================================================ -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YP7930G972');
+      gtag('config', 'AW-18062534244');
+    </script>
 
     <style>
       /* ===================== RESET & BASE ===================== */
@@ -848,7 +846,7 @@ const currentYear = new Date().getFullYear();
           <ul>
             <li>Read the complete ingredient list and serving size.</li>
             <li>Check for allergens, dietary restrictions, or personal sensitivities.</li>
-            <li>Review the manufacturer’s suggested use and storage directions.</li>
+            <li>Review the manufacturer's suggested use and storage directions.</li>
             <li>Check the official website for current pricing and purchase policies.</li>
             <li>Review refund, shipping, and subscription information before ordering.</li>
             <li>Consult a healthcare professional when appropriate.</li>
@@ -910,7 +908,7 @@ const currentYear = new Date().getFullYear();
 
         <p>
           The product presented on the official website is a powdered wellness
-          formula intended to be mixed with water according to the manufacturer’s
+          formula intended to be mixed with water according to the manufacturer's
           directions. The formula may include a variety of plant-based ingredients,
           extracts, fibers, flavorings, or other components.
         </p>
@@ -962,7 +960,7 @@ const currentYear = new Date().getFullYear();
             <h4>Fiber or Other Dietary Components</h4>
             <p>
               Some formulas may include fibers or additional dietary ingredients.
-              Personal tolerance can vary, so follow the manufacturer’s directions.
+              Personal tolerance can vary, so follow the manufacturer's directions.
             </p>
           </div>
         </div>
@@ -997,7 +995,7 @@ const currentYear = new Date().getFullYear();
 
         <p>
           If you decide to use a powdered wellness product, follow the
-          manufacturer’s current directions. Avoid exceeding the recommended serving
+          manufacturer's current directions. Avoid exceeding the recommended serving
           size, and keep the product stored as instructed on the package.
         </p>
 
@@ -1013,7 +1011,7 @@ const currentYear = new Date().getFullYear();
           <li>
             <p>
               <strong>Prepare as instructed</strong>
-              Mix the product only according to the manufacturer’s recommended
+              Mix the product only according to the manufacturer's recommended
               directions and avoid altering the suggested serving amount.
             </p>
           </li>
@@ -1189,7 +1187,7 @@ const currentYear = new Date().getFullYear();
 
         <p>
           Powdered wellness formulas may appeal to consumers looking for a simple
-          product format. Always follow the manufacturer’s current instructions.
+          product format. Always follow the manufacturer's current instructions.
         </p>
 
         <a
